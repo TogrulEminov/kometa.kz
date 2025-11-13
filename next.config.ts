@@ -135,115 +135,115 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  async headers() {
-    return [
-      // ✅ Global headers - daha spesifik pattern
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "on",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin",
-          },
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()",
-          },
-        ],
-      },
-      // API Routes - No cache
-      {
-        source: "/api/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "no-store, max-age=0",
-          },
-        ],
-      },
-      // XML files
-      {
-        source: "/:path*.xml",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "application/xml",
-          },
-          {
-            key: "Cache-Control",
-            value:
-              "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
-          },
-        ],
-      },
-      // Manifest
-      {
-        source: "/manifest.json",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "application/json",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=3600, s-maxage=3600",
-          },
-        ],
-      },
-      // Static assets
-      {
-        source: "/assets/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Images
-      {
-        source: "/:path*\\.(png|jpg|jpeg|gif|webp|avif|ico|svg)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Fonts
-      {
-        source: "/:path*\\.(woff|woff2|ttf|eot)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Next.js static files
-      {
-        source: "/_next/static/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     // ✅ Global headers - daha spesifik pattern
+  //     {
+  //       source: "/:path*",
+  //       headers: [
+  //         {
+  //           key: "X-DNS-Prefetch-Control",
+  //           value: "on",
+  //         },
+  //         {
+  //           key: "X-Frame-Options",
+  //           value: "SAMEORIGIN",
+  //         },
+  //         {
+  //           key: "X-Content-Type-Options",
+  //           value: "nosniff",
+  //         },
+  //         {
+  //           key: "Referrer-Policy",
+  //           value: "strict-origin-when-cross-origin",
+  //         },
+  //         {
+  //           key: "Permissions-Policy",
+  //           value: "camera=(), microphone=(), geolocation=()",
+  //         },
+  //       ],
+  //     },
+  //     // API Routes - No cache
+  //     {
+  //       source: "/api/:path*",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "no-store, max-age=0",
+  //         },
+  //       ],
+  //     },
+  //     // XML files
+  //     {
+  //       source: "/:path*.xml",
+  //       headers: [
+  //         {
+  //           key: "Content-Type",
+  //           value: "application/xml",
+  //         },
+  //         {
+  //           key: "Cache-Control",
+  //           value:
+  //             "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+  //         },
+  //       ],
+  //     },
+  //     // Manifest
+  //     {
+  //       source: "/manifest.json",
+  //       headers: [
+  //         {
+  //           key: "Content-Type",
+  //           value: "application/json",
+  //         },
+  //         {
+  //           key: "Cache-Control",
+  //           value: "public, max-age=3600, s-maxage=3600",
+  //         },
+  //       ],
+  //     },
+  //     // Static assets
+  //     {
+  //       source: "/assets/:path*",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "public, max-age=31536000, immutable",
+  //         },
+  //       ],
+  //     },
+  //     // Images
+  //     {
+  //       source: "/:path*\\.(png|jpg|jpeg|gif|webp|avif|ico|svg)",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "public, max-age=31536000, immutable",
+  //         },
+  //       ],
+  //     },
+  //     // Fonts
+  //     {
+  //       source: "/:path*\\.(woff|woff2|ttf|eot)",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "public, max-age=31536000, immutable",
+  //         },
+  //       ],
+  //     },
+  //     // Next.js static files
+  //     {
+  //       source: "/_next/static/:path*",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "public, max-age=31536000, immutable",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 const withNextIntl = createNextIntlPlugin({

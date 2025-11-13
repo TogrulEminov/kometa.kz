@@ -1,7 +1,6 @@
 import React from "react";
 import CustomImage from "../ImageTag";
-import logoBlack from "@/public/assets/logo-black.png";
-import logoWhite from "@/public/assets/logo.png";
+import logoBlack from "@/public/assets/logo.png";
 import { Link } from "@/src/i18n/navigation";
 
 interface Props {
@@ -13,9 +12,9 @@ export default function Logo({ width, height, isWhite }: Props) {
   return (
     <Link href={"/" as any} className="w-40 xl:w-fit h-fit block">
       <CustomImage
-        src={isWhite ? logoWhite : logoBlack}
+        src={logoBlack}
         title="Logo"
-        width={width ?? 180}
+        width={width ?? 100}
         className="object-contain"
         height={height ?? 70}
       />
