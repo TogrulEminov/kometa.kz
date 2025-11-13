@@ -1,0 +1,47 @@
+/* Reset focus border and box-shadow for Ant Design inputs */
+
+.ant-input-outlined:hover {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.label .title {
+  color: #f8f7f7;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+.error {
+  border: red;
+}
+.input {
+  display: flex;
+  height: 55px;
+  padding: 0 15px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #9e9293;
+  background: transparent;
+  backdrop-filter: blur(3.253246784210205px);
+  color: #f8f7f7;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  &:placeholder-shown {
+    color: #9e9293;
+  }
+}

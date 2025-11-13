@@ -1,0 +1,1928 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "documentId": "srvc-001",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/68018.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1001,
+        "relativePath": "/uploads/images/68018.jpg",
+        "id": 1001,
+        "fileKey": "img_road_transport",
+        "originalName": "68018.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 450000,
+        "publicUrl": "https://blobs.togruleminov.online/68018.jpg",
+        "createdAt": "2025-10-20T08:00:00.000Z",
+        "updatedAt": "2025-10-20T08:00:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/semi.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2001,
+        "relativePath": "/uploads/icons/semi.png",
+        "id": 2001,
+        "fileKey": "icon_truck",
+        "originalName": "semi.png",
+        "mimeType": "image/svg+xml",
+        "fileSize": 1400,
+        "publicUrl": "https://blobs.togruleminov.online/semi.png",
+        "createdAt": "2025-10-20T08:00:00.000Z",
+        "updatedAt": "2025-10-20T08:00:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:00:00.000Z",
+      "updatedAt": "2025-10-20T08:00:00.000Z",
+      "translations": [
+        {
+          "id": 101,
+          "documentId": "trans-001",
+          "locale": "az",
+          "title": "Quru Yol ilə Daşınma",
+          "description": "260+ TIR ilə Çindən, qonşu və MDB ölkələrindən etibarlı və operativ daşınma xidməti.",
+          "slug": "quru-yol-ile-dasinma"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "srvc-002",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/freight-train.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1002,
+        "relativePath": "/uploads/images/freight-train.jpg",
+        "id": 1002,
+        "fileKey": "img_rail_transport",
+        "originalName": "freight-train.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 470000,
+        "publicUrl": "https://blobs.togruleminov.online/freight-train.jpg",
+        "createdAt": "2025-10-20T08:01:00.000Z",
+        "updatedAt": "2025-10-20T08:01:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/cargo-train.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2002,
+        "relativePath": "/uploads/icons/cargo-train.png",
+        "id": 2002,
+        "fileKey": "icon_train",
+        "originalName": "cargo-train.png",
+        "mimeType": "image/png",
+        "fileSize": 1300,
+        "publicUrl": "https://blobs.togruleminov.online/cargo-train.png",
+        "createdAt": "2025-10-20T08:01:00.000Z",
+        "updatedAt": "2025-10-20T08:01:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:01:00.000Z",
+      "updatedAt": "2025-10-20T08:01:00.000Z",
+      "translations": [
+        {
+          "id": 102,
+          "documentId": "trans-002",
+          "locale": "az",
+          "title": "Dəmir Yolu Daşınması",
+          "description": "Uzun məsafələr üçün təhlükəsiz, vaxtında və səmərəli daşınma həlli.",
+          "slug": "demir-yolu-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "srvc-003",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/seo-freight.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1003,
+        "relativePath": "/uploads/images/seo-freight.jpg",
+        "id": 1003,
+        "fileKey": "img_sea_transport",
+        "originalName": "seo-freight.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 480000,
+        "publicUrl": "https://blobs.togruleminov.online/seo-freight.jpg",
+        "createdAt": "2025-10-20T08:02:00.000Z",
+        "updatedAt": "2025-10-20T08:02:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/freight.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2003,
+        "relativePath": "/uploads/icons/freight.png",
+        "id": 2003,
+        "fileKey": "icon_ship",
+        "originalName": "freight.png",
+        "mimeType": "image/svg+xml",
+        "fileSize": 1450,
+        "publicUrl": "https://blobs.togruleminov.online/freight.png",
+        "createdAt": "2025-10-20T08:02:00.000Z",
+        "updatedAt": "2025-10-20T08:02:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:02:00.000Z",
+      "updatedAt": "2025-10-20T08:02:00.000Z",
+      "translations": [
+        {
+          "id": 103,
+          "documentId": "trans-003",
+          "locale": "az",
+          "title": "Dəniz Yolu Daşınması",
+          "description": "Beynəlxalq marşrutlarda sərfəli və həcmlərə uyğun daşınma xidməti.",
+          "slug": "deniz-yolu-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "srvc-004",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/plane.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1004,
+        "relativePath": "/uploads/images/plane.jpg",
+        "id": 1004,
+        "fileKey": "img_air_transport",
+        "originalName": "plane.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 460000,
+        "publicUrl": "https://blobs.togruleminov.online/plane.jpg",
+        "createdAt": "2025-10-20T08:03:00.000Z",
+        "updatedAt": "2025-10-20T08:03:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/plane.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2004,
+        "relativePath": "/uploads/icons/plane.svg",
+        "id": 2004,
+        "fileKey": "icon_plane",
+        "originalName": "plane.png",
+        "mimeType": "image/png",
+        "fileSize": 1500,
+        "publicUrl": "https://blobs.togruleminov.online/plane.png",
+        "createdAt": "2025-10-20T08:03:00.000Z",
+        "updatedAt": "2025-10-20T08:03:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:03:00.000Z",
+      "updatedAt": "2025-10-20T08:03:00.000Z",
+      "translations": [
+        {
+          "id": 104,
+          "documentId": "trans-004",
+          "locale": "az",
+          "title": "Hava Yolu Daşınması",
+          "description": "Təcili və yüksək dəyərli yüklər üçün ən sürətli nəqliyyat seçimi.",
+          "slug": "hava-yolu-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "documentId": "srvc-005",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/heavy.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1005,
+        "relativePath": "/uploads/images/heavy.jpg",
+        "id": 1005,
+        "fileKey": "img_heavy_transport",
+        "originalName": "heavy.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 490000,
+        "publicUrl": "https://blobs.togruleminov.online/heavy.jpg",
+        "createdAt": "2025-10-20T08:04:00.000Z",
+        "updatedAt": "2025-10-20T08:04:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/crane-truck.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2005,
+        "relativePath": "/uploads/icons/crane-truck.png",
+        "id": 2005,
+        "fileKey": "icon_crane",
+        "originalName": "crane-truck.png",
+        "mimeType": "image/png",
+        "fileSize": 1600,
+        "publicUrl": "https://blobs.togruleminov.online/crane-truck.png",
+        "createdAt": "2025-10-20T08:04:00.000Z",
+        "updatedAt": "2025-10-20T08:04:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:04:00.000Z",
+      "updatedAt": "2025-10-20T08:04:00.000Z",
+      "translations": [
+        {
+          "id": 105,
+          "documentId": "trans-005",
+          "locale": "az",
+          "title": "Ağır Texnika Daşınması",
+          "description": "İri və xüsusi ölçülü yüklərin peşəkar şəkildə təhlükəsiz daşınması.",
+          "slug": "agir-texnika-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "documentId": "srvc-006",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/package-shipping.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1006,
+        "relativePath": "/uploads/images/package-shipping.jpg",
+        "id": 1006,
+        "fileKey": "img_groupage_transport",
+        "originalName": "package-shipping.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 440000,
+        "publicUrl": "https://blobs.togruleminov.online/package-shipping.jpg",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "iconsUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/package.png",
+        "type": "icon",
+        "data": null,
+        "fileId": 2006,
+        "relativePath": "/uploads/icons/package.png",
+        "id": 2006,
+        "fileKey": "icon_boxes",
+        "originalName": "package.png",
+        "mimeType": "image/png",
+        "fileSize": 1200,
+        "publicUrl": "https://blobs.togruleminov.online/package.png",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "createdAt": "2025-10-20T08:05:00.000Z",
+      "updatedAt": "2025-10-20T08:05:00.000Z",
+      "translations": [
+        {
+          "id": 106,
+          "documentId": "trans-006",
+          "locale": "az",
+          "title": "Qruppaj Yük Daşınması (Çindən)",
+          "description": "Kiçik həcmli yüklərin birləşdirilmiş şəkildə quru yol ilə səmərəli çatdırılması.",
+          "slug": "qruppaj-yuk-dasinmasi"
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "documentId": "srvc-001",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/global.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1001,
+        "relativePath": "/uploads/images/global.jpg",
+        "id": 1001,
+        "fileKey": "img_air_cargo_89x",
+        "originalName": "global.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 452100,
+        "publicUrl": "https://blobs.togruleminov.online/global.jpg",
+        "createdAt": "2025-10-17T08:17:52.000Z",
+        "updatedAt": "2025-10-17T08:17:52.000Z"
+      },
+      "createdAt": "2025-10-17T08:17:52.000Z",
+      "updatedAt": "2025-10-17T08:17:52.000Z",
+      "translations": [
+        {
+          "id": 101,
+          "documentId": "trans-001",
+          "locale": "az",
+          "title": "Quru Yol Daşınması",
+          "description": "Quru yol daşınma xidməti, həm yerli, həm də uzaq məsafələr üçün etibarlı və sərfəli nəqliyyat təmin edir.",
+          "slug": "quru-yol-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "srvc-002",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/global.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1001,
+        "relativePath": "/uploads/images/global.jpg",
+        "id": 1001,
+        "fileKey": "img_air_cargo_89x",
+        "originalName": "global.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 452100,
+        "publicUrl": "https://blobs.togruleminov.online/global.jpg",
+        "createdAt": "2025-10-17T08:17:52.000Z",
+        "updatedAt": "2025-10-17T08:17:52.000Z"
+      },
+      "createdAt": "2025-10-17T08:17:52.000Z",
+      "updatedAt": "2025-10-17T08:17:52.000Z",
+      "translations": [
+        {
+          "id": 102,
+          "documentId": "trans-002",
+          "locale": "az",
+          "title": "Dəmir Yolu Daşınması",
+          "description": "Uzun məsafələrdə səmərəli və təhlükəsiz daşınma həlləri, yükləriniz vaxtında və minimal risklə çatdırılır.",
+          "slug": "demir-yolu-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "srvc-003",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/global.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1001,
+        "relativePath": "/uploads/images/global.jpg",
+        "id": 1001,
+        "fileKey": "img_air_cargo_89x",
+        "originalName": "global.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 452100,
+        "publicUrl": "https://blobs.togruleminov.online/global.jpg",
+        "createdAt": "2025-10-17T08:17:52.000Z",
+        "updatedAt": "2025-10-17T08:17:52.000Z"
+      },
+      "createdAt": "2025-10-17T08:17:52.000Z",
+      "updatedAt": "2025-10-17T08:17:52.000Z",
+      "translations": [
+        {
+          "id": 103,
+          "documentId": "trans-003",
+          "locale": "az",
+          "title": "Dəniz Yolu Daşınması",
+          "description": "Beynəlxalq marşrutlarda sərfəli və həcmlərə uyğun daşınma imkanı təqdim edirik.",
+          "slug": "deniz-yolu-dasinmasi"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "srvc-004",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/global.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1001,
+        "relativePath": "/uploads/images/global.jpg",
+        "id": 1001,
+        "fileKey": "img_air_cargo_89x",
+        "originalName": "global.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 452100,
+        "publicUrl": "https://blobs.togruleminov.online/global.jpg",
+        "createdAt": "2025-10-17T08:17:52.000Z",
+        "updatedAt": "2025-10-17T08:17:52.000Z"
+      },
+      "createdAt": "2025-10-17T08:17:52.000Z",
+      "updatedAt": "2025-10-17T08:17:52.000Z",
+      "translations": [
+        {
+          "id": 104,
+          "documentId": "trans-004",
+          "locale": "az",
+          "title": "Hava Yolu Daşınması",
+          "description": "Təcili və yüksək dəyərli yüklər üçün ən sürətli nəqliyyat seçimi.",
+          "slug": "hava-yolu-dasinmasi"
+        }
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "documentId": "doc-001",
+      "slug": "document-one",
+      "status": "active",
+      "orderNumber": 1,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 1,
+        "relativePath": "images/document-one.jpg",
+        "id": 1,
+        "fileKey": "doc-001-img",
+        "originalName": "document-one.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 1024,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "updatedAt": "2025-01-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-one",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document One in English",
+          "slug": "document-one-en",
+          "id": 1,
+          "description": "Description for document one in English",
+          "documentId": "doc-001",
+          "locale": "en",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Eins auf Deutsch",
+          "slug": "document-one-de",
+          "id": 2,
+          "description": "Beschreibung für Dokument eins auf Deutsch",
+          "documentId": "doc-001",
+          "locale": "de",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "doc-002",
+      "slug": "document-two",
+      "status": "inactive",
+      "orderNumber": 2,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 2,
+        "relativePath": "images/document-two.png",
+        "id": 2,
+        "fileKey": "doc-002-img",
+        "originalName": "document-two.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "createdAt": "2025-02-01T10:00:00Z",
+        "updatedAt": "2025-02-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-two",
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document Two in English",
+          "slug": "document-two-en",
+          "id": 3,
+          "description": "Description for document two in English",
+          "documentId": "doc-002",
+          "locale": "en",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Zwei auf Deutsch",
+          "slug": "document-two-de",
+          "id": 4,
+          "description": "Beschreibung für Dokument zwei auf Deutsch",
+          "documentId": "doc-002",
+          "locale": "de",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "doc-001",
+      "slug": "document-one",
+      "status": "active",
+      "orderNumber": 1,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 1,
+        "relativePath": "images/document-one.jpg",
+        "id": 1,
+        "fileKey": "doc-001-img",
+        "originalName": "document-one.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 1024,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "updatedAt": "2025-01-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-one",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document One in English",
+          "slug": "document-one-en",
+          "id": 1,
+          "description": "Description for document one in English",
+          "documentId": "doc-001",
+          "locale": "en",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Eins auf Deutsch",
+          "slug": "document-one-de",
+          "id": 2,
+          "description": "Beschreibung für Dokument eins auf Deutsch",
+          "documentId": "doc-001",
+          "locale": "de",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "doc-002",
+      "slug": "document-two",
+      "status": "inactive",
+      "orderNumber": 2,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 2,
+        "relativePath": "images/document-two.png",
+        "id": 2,
+        "fileKey": "doc-002-img",
+        "originalName": "document-two.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "createdAt": "2025-02-01T10:00:00Z",
+        "updatedAt": "2025-02-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-two",
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document Two in English",
+          "slug": "document-two-en",
+          "id": 3,
+          "description": "Description for document two in English",
+          "documentId": "doc-002",
+          "locale": "en",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Zwei auf Deutsch",
+          "slug": "document-two-de",
+          "id": 4,
+          "description": "Beschreibung für Dokument zwei auf Deutsch",
+          "documentId": "doc-002",
+          "locale": "de",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "documentId": "doc-001",
+      "slug": "document-one",
+      "status": "active",
+      "orderNumber": 1,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 1,
+        "relativePath": "images/document-one.jpg",
+        "id": 1,
+        "fileKey": "doc-001-img",
+        "originalName": "document-one.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 1024,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "updatedAt": "2025-01-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-one",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document One in English",
+          "slug": "document-one-en",
+          "id": 1,
+          "description": "Description for document one in English",
+          "documentId": "doc-001",
+          "locale": "en",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Eins auf Deutsch",
+          "slug": "document-one-de",
+          "id": 2,
+          "description": "Beschreibung für Dokument eins auf Deutsch",
+          "documentId": "doc-001",
+          "locale": "de",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "documentId": "doc-002",
+      "slug": "document-two",
+      "status": "inactive",
+      "orderNumber": 2,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 2,
+        "relativePath": "images/document-two.png",
+        "id": 2,
+        "fileKey": "doc-002-img",
+        "originalName": "document-two.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "createdAt": "2025-02-01T10:00:00Z",
+        "updatedAt": "2025-02-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-two",
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document Two in English",
+          "slug": "document-two-en",
+          "id": 3,
+          "description": "Description for document two in English",
+          "documentId": "doc-002",
+          "locale": "en",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Zwei auf Deutsch",
+          "slug": "document-two-de",
+          "id": 4,
+          "description": "Beschreibung für Dokument zwei auf Deutsch",
+          "documentId": "doc-002",
+          "locale": "de",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "documentId": "doc-001",
+      "slug": "document-one",
+      "status": "active",
+      "orderNumber": 1,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 1,
+        "relativePath": "images/document-one.jpg",
+        "id": 1,
+        "fileKey": "doc-001-img",
+        "originalName": "document-one.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 1024,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-2.svg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "updatedAt": "2025-01-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-one",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document One in English",
+          "slug": "document-one-en",
+          "id": 1,
+          "description": "Description for document one in English",
+          "documentId": "doc-001",
+          "locale": "en",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Eins auf Deutsch",
+          "slug": "document-one-de",
+          "id": 2,
+          "description": "Beschreibung für Dokument eins auf Deutsch",
+          "documentId": "doc-001",
+          "locale": "de",
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "documentId": "doc-002",
+      "slug": "document-two",
+      "status": "inactive",
+      "orderNumber": 2,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 2,
+        "relativePath": "images/document-two.png",
+        "id": 2,
+        "fileKey": "doc-002-img",
+        "originalName": "document-two.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/66-partner-3.svg",
+        "createdAt": "2025-02-01T10:00:00Z",
+        "updatedAt": "2025-02-10T12:00:00Z"
+      },
+      "url": "https://example.com/document-two",
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Document Two in English",
+          "slug": "document-two-en",
+          "id": 3,
+          "description": "Description for document two in English",
+          "documentId": "doc-002",
+          "locale": "en",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        },
+        {
+          "title": "Dokument Zwei auf Deutsch",
+          "slug": "document-two-de",
+          "id": 4,
+          "description": "Beschreibung für Dokument zwei auf Deutsch",
+          "documentId": "doc-002",
+          "locale": "de",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        }
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "documentId": "doc-001",
+      "slug": "testimonial-one",
+      "rate": "5",
+      "status": "active",
+      "company": "BusinessTech",
+      "orderNumber": 1,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 1,
+        "relativePath": "images/20597.jpg",
+        "id": 1,
+        "fileKey": "testimonial-001-img",
+        "originalName": "20597.jpg",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "updatedAt": "2025-01-10T12:00:00Z"
+      },
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Birinci Müştəri Rəyi",
+          "slug": "testimonial-one-az",
+          "id": 1,
+          "description": "Xidmətiniz çox sürətli və peşəkar oldu. Yüküm vaxtında və zədələnmədən çatdırıldı. Çox təşəkkür edirəm!",
+          "documentId": "doc-001",
+          "locale": "az",
+          "nameSurname": "Kamran Məmmədov",
+
+          "createdAt": "2025-01-01T10:00:00Z",
+          "updatedAt": "2025-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "doc-002",
+      "slug": "testimonial-two",
+      "rate": "4.5",
+      "status": "active",
+      "company": "BusinessTech",
+      "orderNumber": 2,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 2,
+        "relativePath": "images/testimonial-2.png",
+        "id": 2,
+        "fileKey": "testimonial-002-img",
+        "originalName": "testimonial-2.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "createdAt": "2025-02-01T10:00:00Z",
+        "updatedAt": "2025-02-10T12:00:00Z"
+      },
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "İkinci Müştəri Rəyi",
+          "slug": "testimonial-two-az",
+          "id": 2,
+          "description": "Yüküm çox rahat və təhlükəsiz şəkildə çatdırıldı. Təşkilatınıza çox təşəkkür edirəm, amma qiymətlər bir az yüksək ola bilər.",
+          "documentId": "doc-002",
+          "locale": "az",
+          "nameSurname": "Rəna Hüseynova",
+          "createdAt": "2025-02-01T10:00:00Z",
+          "updatedAt": "2025-02-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "doc-003",
+      "slug": "testimonial-three",
+      "rate": "5",
+      "status": "active",
+      "orderNumber": 3,
+      "company": "BusinessTech",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 3,
+        "relativePath": "images/testimonial-3.png",
+        "id": 3,
+        "fileKey": "testimonial-003-img",
+        "originalName": "testimonial-3.png",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "createdAt": "2025-03-01T10:00:00Z",
+        "updatedAt": "2025-03-10T12:00:00Z"
+      },
+      "createdAt": "2025-03-01T10:00:00Z",
+      "updatedAt": "2025-03-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Üçüncü Müştəri Rəyi",
+          "slug": "testimonial-three-az",
+          "id": 3,
+          "description": "Sizin xidmətinizdən tam məmnunam. Çox sürətli və təhlükəsiz. Mütləq gələcəkdə yenə istifadə edəcəyəm.",
+          "documentId": "doc-003",
+          "locale": "az",
+          "nameSurname": "Fərid Əliyev",
+          "createdAt": "2025-03-01T10:00:00Z",
+          "updatedAt": "2025-03-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "doc-004",
+      "slug": "testimonial-four",
+      "rate": "4.8",
+      "status": "active",
+      "company": "BusinessTech",
+      "orderNumber": 4,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 4,
+        "relativePath": "images/20597.jpg",
+        "id": 4,
+        "fileKey": "testimonial-004-img",
+        "originalName": "20597.jpg",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "createdAt": "2025-04-01T10:00:00Z",
+        "updatedAt": "2025-04-10T12:00:00Z"
+      },
+      "createdAt": "2025-04-01T10:00:00Z",
+      "updatedAt": "2025-04-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Dördüncü Müştəri Rəyi",
+          "slug": "testimonial-four-az",
+          "id": 4,
+          "description": "Xidmətinizin keyfiyyəti əladır. Bütün yüklərim vaxtında və heç bir zərər görmədən çatdırıldı.",
+          "documentId": "doc-004",
+          "locale": "az",
+          "nameSurname": "Nigar Quliyeva",
+          "createdAt": "2025-04-01T10:00:00Z",
+          "updatedAt": "2025-04-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "documentId": "doc-005",
+      "slug": "testimonial-five",
+      "rate": "5",
+      "status": "active",
+      "company": "BusinessTech",
+      "orderNumber": 5,
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "type": "image/png",
+        "data": null,
+        "fileId": 5,
+        "relativePath": "images/20597.jpg",
+        "id": 5,
+        "fileKey": "testimonial-005-img",
+        "originalName": "20597.jpg",
+        "mimeType": "image/png",
+        "fileSize": 2048,
+        "publicUrl": "https://blobs.togruleminov.online/20597.jpg",
+        "createdAt": "2025-05-01T10:00:00Z",
+        "updatedAt": "2025-05-10T12:00:00Z"
+      },
+      "createdAt": "2025-05-01T10:00:00Z",
+      "updatedAt": "2025-05-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Beşinci Müştəri Rəyi",
+          "slug": "testimonial-five-az",
+          "id": 5,
+          "description": "Mükəmməl xidmət! Yüküm vaxtında, təhlükəsiz və zədəsiz şəkildə çatdırıldı.",
+          "documentId": "doc-005",
+          "locale": "az",
+          "nameSurname": "Əli Həsənov",
+          "createdAt": "2025-05-01T10:00:00Z",
+          "updatedAt": "2025-05-10T12:00:00Z"
+        }
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "clx1",
+      "isoCode": "AZE",
+      "status": "ACTIVE",
+      "translations": [
+        {
+          "id": "t1",
+          "countryName": "Azerbaijan",
+          "locale": "en"
+        },
+        {
+          "id": "t2",
+          "countryName": "Azərbaycan",
+          "locale": "az"
+        }
+      ],
+      "offices": [
+        {
+          "id": "o1",
+          "documentId": "off1",
+          "city": "Baku",
+          "address": "28 May Street 5",
+          "latitude": 40.4093,
+          "longitude": 49.8671,
+          "isDeleted": false
+        }
+      ]
+    },
+    {
+      "id": "clx2",
+      "isoCode": "TUR",
+      "status": "ACTIVE",
+      "translations": [
+        {
+          "id": "t3",
+          "countryName": "Turkey",
+          "locale": "en"
+        },
+        {
+          "id": "t4",
+          "countryName": "Türkiyə",
+          "locale": "az"
+        }
+      ],
+      "offices": [
+        {
+          "id": "o2",
+          "documentId": "off2",
+          "city": "Istanbul",
+          "address": "Levent District",
+          "latitude": 41.0082,
+          "longitude": 28.9784,
+          "isDeleted": false
+        },
+        {
+          "id": "o3",
+          "documentId": "off3",
+          "city": "Ankara",
+          "address": "Çankaya District",
+          "latitude": 39.9334,
+          "longitude": 32.8597,
+          "isDeleted": false
+        }
+      ]
+    },
+    {
+      "id": "clx3",
+      "isoCode": "USA",
+      "status": "PLANNED",
+      "translations": [
+        {
+          "id": "t5",
+          "countryName": "United States",
+          "locale": "en"
+        },
+        {
+          "id": "t6",
+          "countryName": "ABŞ",
+          "locale": "az"
+        }
+      ],
+      "offices": [
+        {
+          "id": "o4",
+          "documentId": "off4",
+          "city": "New York",
+          "address": "Manhattan",
+          "latitude": 40.7128,
+          "longitude": -74.006,
+          "isDeleted": false
+        }
+      ]
+    }
+  ],
+  "youtubeLink": [
+    {
+      "id": 101,
+      "documentId": "vid_6a8f3c6b-2c9f-4e7f-9f21-0b7e3d1a10a1",
+
+      "url": "https://www.youtube.com/watch?v=Zk9J6wK1AbC",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1006,
+        "relativePath": "/uploads/images/youtube-banner.jpg",
+        "id": 1006,
+        "fileKey": "img_groupage_transport",
+        "originalName": "youtube-banner.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 440000,
+        "publicUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "publishedAt": "2025-10-05T09:00:00.000Z",
+      "duration": "5:24",
+      "views": "12.5K",
+      "createdAt": "2025-10-19T10:00:00.000Z",
+      "updatedAt": "2025-10-19T10:00:00.000Z",
+      "translations": [
+        {
+          "id": 1002,
+          "title": "Beynəlxalq Kargo Şəbəkəmiz Necə İşləyir",
+          "description": "Qlobal marşrutlarımız, gömrük proseslərimiz və uçdan-uca çatdırılma göstəricilərimiz barədə qısa icmal.",
+          "locale": "az",
+          "documentId": "tr_6a8f3c6b-az",
+          "createdAt": "2025-10-19T10:00:00.000Z",
+          "updatedAt": "2025-10-19T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "documentId": "vid_7b12e8c0-6b34-4b46-8f0c-2a0bcf0ef7d9",
+
+      "url": "https://www.youtube.com/watch?v=1fX9yF0QTe8",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1006,
+        "relativePath": "/uploads/images/youtube-banner.jpg",
+        "id": 1006,
+        "fileKey": "img_groupage_transport",
+        "originalName": "youtube-banner.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 440000,
+        "publicUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "publishedAt": "2025-09-19T09:00:00.000Z",
+      "duration": "3:45",
+      "views": "8.2K",
+      "createdAt": "2025-10-19T10:00:00.000Z",
+      "updatedAt": "2025-10-19T10:00:00.000Z",
+      "translations": [
+        {
+          "id": 1004,
+          "title": "Smart Anbar İdarəetmə Texnologiyası",
+          "description": "Avtomatlaşdırma, real-time inventar izləmə və sürətli komplektləşdirmə üçün optimallaşdırılmış proseslər.",
+          "locale": "az",
+          "documentId": "tr_7b12e8c0-az",
+          "createdAt": "2025-10-19T10:00:00.000Z",
+          "updatedAt": "2025-10-19T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "documentId": "vid_f0a2d9f9-0c3e-4f3f-8b7a-7f2f2a5f1f31",
+
+      "url": "https://www.youtube.com/watch?v=K3QzzggnV9M",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1006,
+        "relativePath": "/uploads/images/youtube-banner.jpg",
+        "id": 1006,
+        "fileKey": "img_groupage_transport",
+        "originalName": "youtube-banner.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 440000,
+        "publicUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "publishedAt": "2025-10-01T09:00:00.000Z",
+      "duration": "4:12",
+      "views": "15.8K",
+      "createdAt": "2025-10-19T10:00:00.000Z",
+      "updatedAt": "2025-10-19T10:00:00.000Z",
+      "translations": [
+        {
+          "id": 1006,
+          "title": "Express Çatdırılma Xidməti 24/7",
+          "description": "Təcili yüklərin 24 saat içində çatdırılması, tam izləmə və proaktiv bildirişlər ilə.",
+          "locale": "az",
+          "documentId": "tr_f0a2d9f9-az",
+          "createdAt": "2025-10-19T10:00:00.000Z",
+          "updatedAt": "2025-10-19T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "documentId": "vid_d3c7a2b4-25c8-49a7-9a6a-36d7bb0f9e77",
+
+      "url": "https://www.youtube.com/watch?v=vx2u5uUu3DE",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "type": "image",
+        "data": null,
+        "fileId": 1006,
+        "relativePath": "/uploads/images/youtube-banner.jpg",
+        "id": 1006,
+        "fileKey": "img_groupage_transport",
+        "originalName": "youtube-banner.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 440000,
+        "publicUrl": "https://blobs.togruleminov.online/youtube-banner.jpg",
+        "createdAt": "2025-10-20T08:05:00.000Z",
+        "updatedAt": "2025-10-20T08:05:00.000Z"
+      },
+      "publishedAt": "2025-10-14T09:00:00.000Z",
+      "duration": "6:30",
+      "views": "9.4K",
+      "createdAt": "2025-10-19T10:00:00.000Z",
+      "updatedAt": "2025-10-19T10:00:00.000Z",
+      "translations": [
+        {
+          "id": 1008,
+          "title": "Ətraf Mühitə Dost Daşıma Həlləri",
+          "description": "Elektrikli nəqliyyat parkımız, karbon ölçümləri və marşrut optimallaşdırması ilə daha yaşıl logistika.",
+          "locale": "az",
+          "documentId": "tr_d3c7a2b4-az",
+          "createdAt": "2025-10-19T10:00:00.000Z",
+          "updatedAt": "2025-10-19T10:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "id": 1,
+      "documentId": "advantage-1",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/order-tracking.png",
+        "publicUrl": "https://blobs.togruleminov.online/order-tracking.png",
+        "originalName": "order-tracking.png",
+        "mimeType": "image/png",
+        "fileSize": 0,
+        "fileId": 1,
+        "relativePath": "order-tracking.png",
+        "fileKey": "order-tracking",
+        "type": "image",
+        "data": null,
+        "id": 1,
+        "createdAt": "2025-10-20T00:00:00Z",
+        "updatedAt": "2025-10-20T00:00:00Z"
+      },
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 1,
+          "documentId": "advantage-1",
+          "locale": "az",
+          "slug": "tam-nezaretli-marsrut",
+          "title": "Tam nəzarətli marşrut",
+          "description": "Yüklər bütün mərhələlərdə izlənir və idarə olunur.",
+          "seo": {
+            "title": "Tam nəzarətli marşrut",
+            "description": "Yükləriniz Çindən Azərbaycana tam izləmə ilə çatdırılır."
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "advantage-2",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/delivery.png",
+        "publicUrl": "https://blobs.togruleminov.online/delivery.png",
+        "originalName": "delivery.png",
+        "mimeType": "image/png",
+        "fileSize": 0,
+        "fileId": 2,
+        "relativePath": "delivery.png",
+        "fileKey": "delivery",
+        "type": "image",
+        "data": null,
+        "id": 2,
+        "createdAt": "2025-10-20T00:00:00Z",
+        "updatedAt": "2025-10-20T00:00:00Z"
+      },
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 2,
+          "documentId": "advantage-2",
+          "locale": "az",
+          "slug": "olcuye-uygun-dasinma",
+          "title": "Ölçüyə uyğun daşınma",
+          "description": "Kiçik paketlərdən iri texnikayadək hər növ yük daşıyırıq.",
+          "seo": {
+            "title": "Ölçüyə uyğun daşınma",
+            "description": "Fərqli ölçülərdə yüklər üçün çevik logistika həlləri."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "advantage-3",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/businessmen.png",
+        "publicUrl": "https://blobs.togruleminov.online/businessmen.png",
+        "originalName": "businessmen.png",
+        "mimeType": "image/png",
+        "fileSize": 0,
+        "fileId": 3,
+        "relativePath": "businessmen.png",
+        "fileKey": "businessmen",
+        "type": "image",
+        "data": null,
+        "id": 3,
+        "createdAt": "2025-10-20T00:00:00Z",
+        "updatedAt": "2025-10-20T00:00:00Z"
+      },
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 3,
+          "documentId": "advantage-3",
+          "locale": "az",
+          "slug": "pesekar-komanda",
+          "title": "Peşəkar komanda",
+          "description": "Təcrübəli heyətlə uzunmüddətli etibarlı əməkdaşlıq.",
+          "seo": {
+            "title": "Peşəkar komanda",
+            "description": "Logistika sahəsində peşəkar mütəxəssislərlə xidmət."
+          }
+        }
+      ]
+    }
+  ],
+  "process": [
+    {
+      "id": 1,
+      "documentId": "work-process-001",
+      "orderNumber": 1,
+      "createdAt": "2025-10-20T10:00:00Z",
+
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 101,
+          "documentId": "work-process-001",
+          "locale": "az",
+          "slug": "planlasdirma",
+          "title": "Planlaşdırma",
+          "description": "Yüklərinizin növünə və istiqamətinə uyğun detallı plan hazırlanır."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "work-process-002",
+      "orderNumber": 2,
+
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 102,
+          "documentId": "work-process-002",
+          "locale": "az",
+          "slug": "qablasdirma",
+          "title": "Qablaşdırma",
+          "description": "Təhlükəsizlik və səmərəlilik üçün peşəkar şəkildə qablaşdırma təmin olunur."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "work-process-003",
+      "orderNumber": 3,
+
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 103,
+          "documentId": "work-process-003",
+          "locale": "az",
+          "slug": "dasinma",
+          "title": "Daşınma",
+          "description": "Marşrut üzrə izləmə ilə yükləriniz vaxtında və etibarlı şəkildə daşınır."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "work-process-004",
+      "orderNumber": 4,
+
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z",
+      "translations": [
+        {
+          "id": 104,
+          "documentId": "work-process-004",
+          "locale": "az",
+          "slug": "catdirilma",
+          "title": "Çatdırılma",
+          "description": "Müştəri ünvanına tam və zərərsiz çatdırılma təmin edilir."
+        }
+      ]
+    }
+  ],
+  "fag": [
+    {
+      "id": 1,
+      "documentId": "faq-001",
+      "status": "active",
+      "createdAt": "2025-10-01T10:00:00Z",
+      "updatedAt": "2025-10-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Hava Yolu Daşınması nədir?",
+          "description": "Hava yolu daşınması, malların havada daşınmasıdır və bu, beynəlxalq göndərişlər üçün ən sürətli üsuldur.",
+          "id": 1,
+          "documentId": "faq-001",
+          "slug": "hava-yolu-dasinmasi-nedir",
+          "locale": "az"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "faq-002",
+      "status": "active",
+      "createdAt": "2025-10-01T10:00:00Z",
+      "updatedAt": "2025-10-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Dəniz Yolu Daşınması necə işləyir?",
+          "description": "Dəniz yolu daşınması, malların dəniz vasitəsilə daşınmasıdır və ümumiyyətlə böyük yük gəmiləri istifadə olunur.",
+          "id": 2,
+          "documentId": "faq-002",
+          "slug": "deniz-yolu-dasinmasi-nece-isleyir",
+          "locale": "az"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "faq-003",
+      "status": "active",
+      "createdAt": "2025-10-01T10:00:00Z",
+      "updatedAt": "2025-10-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Quru Yolu Daşınması nədir?",
+          "description": "Quru yolu daşınması, malların yol və ya dəmir yolu ilə daşınmasıdır və adətən daxili və ya regional daşımalar üçün istifadə olunur.",
+          "id": 3,
+          "documentId": "faq-003",
+          "slug": "quru-yolu-dasinmasi-nedir",
+          "locale": "az"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "faq-004",
+      "status": "active",
+      "createdAt": "2025-10-01T10:00:00Z",
+      "updatedAt": "2025-10-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Yüklərim nə vaxt çatacaq?",
+          "description": "Yüklərinizin çatma vaxtı nəqliyyat vasitəsindən və təyinat yerindən asılıdır. Hava yolu daşınması ən sürətli, sonra isə dəniz yolu və quru yolu daşınması gəlir.",
+          "id": 4,
+          "documentId": "faq-004",
+          "slug": "yuklerim-ne-vaxt-chatacaq",
+          "locale": "az"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "documentId": "faq-005",
+      "status": "active",
+      "createdAt": "2025-10-01T10:00:00Z",
+      "updatedAt": "2025-10-10T12:00:00Z",
+      "translations": [
+        {
+          "title": "Yüklərim sığortalanıb?",
+          "description": "Bəli, bütün yüklər daşınma zamanı sığorta edilir. Əlavə sığorta istəyirsinizsə, zəhmət olmasa bizimlə əlaqə saxlayın.",
+          "id": 5,
+          "documentId": "faq-005",
+          "slug": "yuklerim-sigortalanib",
+          "locale": "az"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "documentId": "doc_12345",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/1.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 123,
+        "relativePath": "/images/doc_12345.jpg",
+        "id": 123,
+        "fileKey": "abc123xyz",
+        "originalName": "certificate_image1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 204800,
+        "publicUrl": "https://blobs.togruleminov.online/1.webp",
+        "createdAt": "2025-10-21T08:30:00Z",
+        "updatedAt": "2025-10-21T08:30:00Z"
+      },
+      "createdAt": "2025-10-21T08:30:00Z",
+      "updatedAt": "2025-10-21T08:30:00Z",
+      "translations": [
+        {
+          "title": "Başlıq Sertifikatı AZ",
+          "description": "Sertifikatın izahı Azərbaycan dilində",
+          "id": 1,
+          "documentId": "doc_12345",
+          "locale": "az",
+          "slug": "sertifikat-basligi-az"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "doc_12346",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/1.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 124,
+        "relativePath": "/images/doc_12345.jpg",
+        "id": 124,
+        "fileKey": "abc123xyz",
+        "originalName": "certificate_image1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 204800,
+        "publicUrl": "https://blobs.togruleminov.online/1.webp",
+        "createdAt": "2025-10-21T08:30:00Z",
+        "updatedAt": "2025-10-21T08:30:00Z"
+      },
+      "createdAt": "2025-10-21T09:00:00Z",
+      "updatedAt": "2025-10-21T09:00:00Z",
+      "translations": [
+        {
+          "title": "Sertifikat Başlığı AZ",
+          "description": "Sertifikatın izahı Azərbaycan dilində",
+          "id": 2,
+          "documentId": "doc_12346",
+          "locale": "az",
+          "slug": "sertifikat-basligi-az"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "doc_12347",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/1.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 125,
+        "relativePath": "/images/doc_12345.jpg",
+        "id": 125,
+        "fileKey": "abc123xyz",
+        "originalName": "certificate_image1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 204800,
+        "publicUrl": "https://blobs.togruleminov.online/1.webp",
+        "createdAt": "2025-10-21T08:30:00Z",
+        "updatedAt": "2025-10-21T08:30:00Z"
+      },
+      "createdAt": "2025-10-21T10:00:00Z",
+      "updatedAt": "2025-10-21T10:00:00Z",
+      "translations": [
+        {
+          "title": "Sertifikat Başlığı AZ",
+          "description": "Sertifikatın izahı Azərbaycan dilində",
+          "id": 3,
+          "documentId": "doc_12347",
+          "locale": "az",
+          "slug": "sertifikat-basligi-az"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "doc_12348",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/1.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 126,
+        "relativePath": "/images/doc_12345.jpg",
+        "id": 126,
+        "fileKey": "abc123xyz",
+        "originalName": "certificate_image1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 204800,
+        "publicUrl": "https://blobs.togruleminov.online/1.webp",
+        "createdAt": "2025-10-21T08:30:00Z",
+        "updatedAt": "2025-10-21T08:30:00Z"
+      },
+      "createdAt": "2025-10-21T11:00:00Z",
+      "updatedAt": "2025-10-21T11:00:00Z",
+      "translations": [
+        {
+          "title": "Sertifikat Başlığı AZ",
+          "description": "Sertifikatın izahı Azərbaycan dilində",
+          "id": 4,
+          "documentId": "doc_12348",
+          "locale": "az",
+          "slug": "sertifikat-basligi-az"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "documentId": "doc_12349",
+
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/1.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 127,
+        "relativePath": "/images/doc_12345.jpg",
+        "id": 127,
+        "fileKey": "abc123xyz",
+        "originalName": "certificate_image1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 204800,
+        "publicUrl": "https://blobs.togruleminov.online/1.webp",
+        "createdAt": "2025-10-21T08:30:00Z",
+        "updatedAt": "2025-10-21T08:30:00Z"
+      },
+      "createdAt": "2025-10-21T12:00:00Z",
+      "updatedAt": "2025-10-21T12:00:00Z",
+      "translations": [
+        {
+          "title": "Sertifikat Başlığı AZ",
+          "description": "Sertifikatın izahı Azərbaycan dilində",
+          "id": 5,
+          "documentId": "doc_12349",
+          "locale": "az",
+          "slug": "sertifikat-basligi-az"
+        }
+      ]
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "documentId": "emp_001",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/team-img1.png",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 101,
+        "relativePath": "/images/employee1.jpg",
+        "id": 101,
+        "fileKey": "file_key_001",
+        "originalName": "employee1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 123456,
+        "publicUrl": "https://blobs.togruleminov.online/team-img1.png",
+        "createdAt": "2025-10-01T09:00:00Z",
+        "updatedAt": "2025-10-01T09:00:00Z"
+      },
+      "createdAt": "2025-10-01T09:00:00Z",
+      "updatedAt": "2025-10-01T09:00:00Z",
+      "position": {
+        "id": 1,
+        "documentId": "pos_001",
+        "createdAt": "2025-09-15T10:00:00Z",
+        "updatedAt": "2025-09-15T10:00:00Z",
+        "status": "published",
+        "translations": [
+          {
+            "id": 11,
+            "title": "Layihə Meneceri",
+            "slug": "layihe-meneceri",
+            "locale": "az",
+            "documentId": "pos_001",
+            "createdAt": "2025-09-15T10:00:00Z",
+            "updatedAt": "2025-09-15T10:00:00Z"
+          }
+        ]
+      },
+      "translations": [
+        {
+          "title": "Əli Əliyev",
+          "description": "Təcrübəli layihə meneceri, 8 ildən çox təcrübəyə sahibdir.",
+          "id": 101,
+          "documentId": "emp_001",
+          "locale": "az",
+          "slug": "eli-eliyev"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "documentId": "emp_002",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/team-img8.png",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 102,
+        "relativePath": "/images/employee1.jpg",
+        "id": 102,
+        "fileKey": "file_key_001",
+        "originalName": "employee1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 123456,
+        "publicUrl": "https://blobs.togruleminov.online/team-img8.png",
+        "createdAt": "2025-10-01T09:00:00Z",
+        "updatedAt": "2025-10-01T09:00:00Z"
+      },
+      "createdAt": "2025-10-02T09:00:00Z",
+      "updatedAt": "2025-10-02T09:00:00Z",
+      "position": {
+        "id": 2,
+        "documentId": "pos_002",
+        "createdAt": "2025-09-16T10:00:00Z",
+        "updatedAt": "2025-09-16T10:00:00Z",
+        "status": "published",
+        "translations": [
+          {
+            "id": 12,
+            "title": "Proqramçı",
+            "slug": "programci",
+            "locale": "az",
+            "documentId": "pos_002",
+            "createdAt": "2025-09-16T10:00:00Z",
+            "updatedAt": "2025-09-16T10:00:00Z"
+          }
+        ]
+      },
+      "translations": [
+        {
+          "title": "Nigar Quliyeva",
+          "description": "Frontend üzrə ixtisaslaşmış proqramçı.",
+          "id": 102,
+          "documentId": "emp_002",
+          "locale": "az",
+          "slug": "nigar-quliyeva"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "documentId": "emp_003",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/team-img3.png",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 103,
+        "relativePath": "/images/employee1.jpg",
+        "id": 103,
+        "fileKey": "file_key_001",
+        "originalName": "employee1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 123456,
+        "publicUrl": "https://blobs.togruleminov.online/team-img3.png",
+        "createdAt": "2025-10-01T09:00:00Z",
+        "updatedAt": "2025-10-01T09:00:00Z"
+      },
+      "createdAt": "2025-10-03T09:00:00Z",
+      "updatedAt": "2025-10-03T09:00:00Z",
+      "position": {
+        "id": 3,
+        "documentId": "pos_003",
+        "createdAt": "2025-09-17T10:00:00Z",
+        "updatedAt": "2025-09-17T10:00:00Z",
+        "status": "published",
+        "translations": [
+          {
+            "id": 13,
+            "title": "Dizayner",
+            "slug": "dizayner",
+            "locale": "az",
+            "documentId": "pos_003",
+            "createdAt": "2025-09-17T10:00:00Z",
+            "updatedAt": "2025-09-17T10:00:00Z"
+          }
+        ]
+      },
+      "translations": [
+        {
+          "title": "Murad Məmmədov",
+          "description": "UX/UI dizayn üzrə mütəxəssis.",
+          "id": 103,
+          "documentId": "emp_003",
+          "locale": "az",
+          "slug": "murad-memmedov"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "documentId": "emp_004",
+      "imageUrl": {
+        "fullUrl": "https://blobs.togruleminov.online/3.webp",
+        "type": "image/jpeg",
+        "data": null,
+        "fileId": 104,
+        "relativePath": "/images/employee1.jpg",
+        "id": 104,
+        "fileKey": "file_key_001",
+        "originalName": "employee1.jpg",
+        "mimeType": "image/jpeg",
+        "fileSize": 123456,
+        "publicUrl": "https://blobs.togruleminov.online/3.webp",
+        "createdAt": "2025-10-01T09:00:00Z",
+        "updatedAt": "2025-10-01T09:00:00Z"
+      },
+      "createdAt": "2025-10-04T09:00:00Z",
+      "updatedAt": "2025-10-04T09:00:00Z",
+      "position": {
+        "id": 4,
+        "documentId": "pos_004",
+        "createdAt": "2025-09-18T10:00:00Z",
+        "updatedAt": "2025-09-18T10:00:00Z",
+        "status": "published",
+        "translations": [
+          {
+            "id": 14,
+            "title": "Marketinq Mütəxəssisi",
+            "slug": "marketinq-mutexessisi",
+            "locale": "az",
+            "documentId": "pos_004",
+            "createdAt": "2025-09-18T10:00:00Z",
+            "updatedAt": "2025-09-18T10:00:00Z"
+          }
+        ]
+      },
+      "translations": [
+        {
+          "title": "Aysel Hüseynova",
+          "description": "Rəqəmsal marketinq sahəsində ixtisaslaşmışdır.",
+          "id": 104,
+          "documentId": "emp_004",
+          "locale": "az",
+          "slug": "aysel-huseynova"
+        }
+      ]
+    }
+  ],
+  "about": {
+    "imageUrl": {
+      "fullUrl": "https://blobs.togruleminov.online/2151541903.jpg",
+      "type": "image/jpeg",
+      "data": null,
+      "fileId": 1,
+      "relativePath": "images/document-one.jpg",
+      "id": 1,
+      "fileKey": "doc-001-img",
+      "originalName": "document-one.jpg",
+      "mimeType": "image/jpeg",
+      "fileSize": 1024,
+      "publicUrl": "https://blobs.togruleminov.online/2151541903.jpg",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z"
+    },
+
+    "title": "Logistika Həllərində Etibarlı Tərəfdaş",
+    "subtitle": "Biz logistika sahəsində qabaqcıl və etibarlı tərəfdaşınızıq.",
+    "description": "Biz, müştərilərimizin ehtiyaclarına ən uyğun logistika həlləri təqdim edirik. Təcrübəli komandamız və geniş xidmət şəbəkəmizlə, sizə logistikanın bütün sahələrində dəstək olmağa hazırıq.\nSürətli və etibarlı çatdırılma, optimal qiymətlər və müştəri məmnuniyyəti bizim prioritetlərimizdəndir.",
+    "badge": "HAQQIMIZDA",
+    "statistics": [
+      {
+        "value": "500+",
+        "label": "Müştəri"
+      },
+      {
+        "value": "15+",
+        "label": "İl Təcrübə"
+      }
+    ],
+    "features": [
+      {
+        "title": "Sürətli Çatdırılma"
+      },
+      {
+        "title": "Global Şəbəkə"
+      },
+      {
+        "title": "Fərdiləşdirilmiş Həllər"
+      },
+      {
+        "title": "Müştəri Dəstəyi"
+      }
+    ],
+    "values": [
+      {
+        "title": "Etibarlılıq",
+        "description": "Bizimlə çalışmaq, zamanında və təhlükəsiz çatdırılmağı təmin etmək deməkdir."
+      },
+      {
+        "title": "İnnovasiya",
+        "description": "Ən son texnologiyaları və yenilikləri tətbiq edərək, logistika xidmətlərini daha effektiv və sürətli edirik."
+      },
+      {
+        "title": "Əməkdaşlıq",
+        "description": "Müştərilərimizlə güclü əlaqələr quraraq uzunmüddətli əməkdaşlıqlar yaradırıq."
+      }
+    ]
+  }
+}

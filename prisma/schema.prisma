@@ -1,0 +1,1308 @@
+generator client {
+  provider   = "prisma-client-js"
+  output     = "../src/generated/prisma"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+  SUPER_ADMIN
+  CONTENT_MANAGER
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  username      String    @unique
+  password      String
+  emailVerified DateTime?
+  image         String?
+  role          Role      @default(USER)
+
+  createdById  String?
+  createdBy    User?   @relation("UserCreated", fields: [createdById], references: [id])
+  createdUsers User[]  @relation("UserCreated")
+  isDeleted    Boolean @default(false)
+
+  updatedById        String? // Bu istifadəçi kim tərəfindən yenilənib?
+  updatedBy          User?                @relation("UserUpdated", fields: [updatedById], references: [id])
+  updatedUsers       User[]               @relation("UserUpdated")
+  Categories         Categories[]
+  SectionContent     SectionContent[]
+  Blog               Blog[]
+  Faq                Faq[]
+  Advantages         Advantages[]
+  WorkProcess        WorkProcess[]
+  Statistics         Statistics[]
+  Slider             Slider[]
+  Branch             Branch[]
+  Hero               Hero[]
+  Youtube            Youtube[]
+  Certificates       Certificates[]
+  Testimonials       Testimonials[]
+  Partners           Partners[]
+  Features           Features[]
+  Position           Position[]
+  Employee           Employee[]
+  About              About[]
+  Services           Services[]
+  SectionCta         SectionCta[]
+  ContactInformation ContactInformation[]
+  ContactEnum        ContactEnum[]
+  photoGalleries     PhotoGallery[]
+
+  @@index([isDeleted])
+  @@index([email, username])
+  @@index([role])
+  @@index([createdById])
+  @@index([updatedById])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@index([expires])
+}
+
+model File {
+  id                Int           @id @default(autoincrement())
+  fileKey           String        @unique
+  originalName      String
+  mimeType          String
+  fileSize          Int
+  publicUrl         String
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  categoryImage     Categories?   @relation("CategoryFiles")
+  seoImage          Seo?          @relation("SeoFiles")
+  blogImage         Blog?         @relation("BlogFiles")
+  advantagesImage   Advantages?   @relation("AdvantagesIcons")
+  sliderImage       Slider?       @relation("SliderImg")
+  hero              Hero?         @relation("heroFile")
+  Youtube           Youtube?      @relation("youtubeFile")
+  certificates      Certificates? @relation("certificatesFile")
+  testimonials      Testimonials? @relation("testimonialsFile")
+  Partners          Partners?     @relation("partnersFiles")
+  Features          Features?     @relation("featuresFile")
+  Employee          Employee?     @relation("employeeFiles")
+  About             About?        @relation("AboutFile")
+  servicesIcons     Services?     @relation("servicesIcons")
+  servicesImage     Services?     @relation("servicesImage")
+  photoGallery      PhotoGallery? @relation("photoGalleryFilesMulti", fields: [photoGalleryid], references: [id])
+  photoGalleryid    Int?
+  photoGalleryImage PhotoGallery? @relation("photoGalleryFilesSingle")
+
+  @@index([createdAt])
+  @@index([mimeType])
+}
+
+model Seo {
+  id                   Int                      @id @default(autoincrement())
+  metaDescription      String
+  metaKeywords         String
+  metaTitle            String
+  locale               Locales                  @default(az)
+  imageId              Int?                     @unique
+  imageUrl             File?                    @relation("SeoFiles", fields: [imageId], references: [id], onDelete: SetNull)
+  categories           CategoriesTranslations[]
+  BlogTranslations     BlogTranslations[]
+  ServicesTranslations ServicesTranslations[]
+
+  @@index([locale])
+  @@index([imageId])
+}
+
+model Social {
+  id         Int      @id @default(autoincrement())
+  socialName String   @unique
+  socialLink String   @unique
+  iconName   String
+  status     Status   @default(published)
+  documentId String   @unique @default(cuid())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum Status {
+  published
+  draft
+}
+
+// data schema
+
+// categories
+model Categories {
+  id           Int                      @id @default(autoincrement())
+  documentId   String                   @unique @default(cuid())
+  slug         String
+  isDeleted    Boolean                  @default(false)
+  status       Status                   @default(published)
+  imageId      Int?                     @unique
+  imageUrl     File?                    @relation("CategoryFiles", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @updatedAt
+  translations CategoriesTranslations[]
+  user         User?                    @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([slug])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model CategoriesTranslations {
+  id          Int         @id @default(autoincrement())
+  title       String
+  description String
+  locale      Locales     @default(az)
+  document    Categories? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  seo         Seo?        @relation(fields: [seoId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  seoId       Int?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([seoId])
+  @@index([title])
+}
+
+// blog
+model Blog {
+  id           Int                @id @default(autoincrement())
+  documentId   String             @unique @default(cuid())
+  isDeleted    Boolean            @default(false)
+  status       Status             @default(published)
+  imageId      Int?               @unique
+  imageUrl     File?              @relation("BlogFiles", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  translations BlogTranslations[]
+  user         User?              @relation(fields: [userId], references: [id])
+  uniqueViews  BlogView[]
+  userId       String?
+  view         Int                @default(0)
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([view])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model BlogTranslations {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String
+  tags        Json
+  readTime    String
+  locale      Locales  @default(az)
+  document    Blog?    @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  seo         Seo?     @relation(fields: [seoId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  seoId       Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([seoId])
+  @@index([title])
+}
+
+model BlogView {
+  id        Int      @id @default(autoincrement())
+  blogId    Int
+  blog      Blog     @relation(fields: [blogId], references: [id], onDelete: Cascade)
+  ipAddress String
+  viewedAt  DateTime @default(now())
+
+  @@unique([blogId, ipAddress])
+  @@index([blogId])
+  @@index([viewedAt])
+  @@index([ipAddress])
+}
+
+// section
+model SectionContent {
+  id           Int                          @id @default(autoincrement())
+  documentId   String                       @unique @default(cuid())
+  status       Status                       @default(published)
+  key          String?                      @unique
+  createdAt    DateTime                     @default(now())
+  updatedAt    DateTime                     @default(now())
+  translations SectionContentTranslations[]
+  user         User?                        @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?                         @default(0)
+  isDeleted    Boolean                      @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([key])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+  @@index([isDeleted, key])
+}
+
+model SectionContentTranslations {
+  id          Int             @id @default(autoincrement())
+  title       String
+  slug        String?
+  subTitle    String?
+  locale      Locales         @default(az)
+  document    SectionContent? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  description String?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+// fag
+model Faq {
+  id           Int               @id @default(autoincrement())
+  documentId   String            @unique @default(cuid())
+  status       Status            @default(published)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @default(now())
+  translations FaqTranslations[]
+  user         User?             @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?              @default(0)
+  isDeleted    Boolean           @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model FaqTranslations {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String?  @unique
+  locale      Locales  @default(az)
+  document    Faq?     @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  description String?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+// advantages
+model Advantages {
+  id           Int                      @id @default(autoincrement())
+  documentId   String                   @unique @default(cuid())
+  isDeleted    Boolean                  @default(false)
+  status       Status                   @default(published)
+  imageId      Int?                     @unique
+  imageUrl     File?                    @relation("AdvantagesIcons", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @updatedAt
+  translations AdvantagesTranslations[]
+  user         User?                    @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model AdvantagesTranslations {
+  id          Int         @id @default(autoincrement())
+  title       String
+  description String
+  slug        String      @unique
+  locale      Locales     @default(az)
+  document    Advantages? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// work process
+model WorkProcess {
+  id           Int                       @id @default(autoincrement())
+  documentId   String                    @unique @default(cuid())
+  status       Status                    @default(published)
+  createdAt    DateTime                  @default(now())
+  updatedAt    DateTime                  @default(now())
+  translations WorkProcessTranslations[]
+  user         User?                     @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?                      @default(0)
+  isDeleted    Boolean                   @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+  @@index([isDeleted, orderNumber])
+}
+
+model WorkProcessTranslations {
+  id          Int          @id @default(autoincrement())
+  title       String
+  slug        String?      @unique
+  locale      Locales      @default(az)
+  document    WorkProcess? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  description String?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+//statistikalar
+model Statistics {
+  id           Int                      @id @default(autoincrement())
+  documentId   String                   @unique @default(cuid())
+  status       Status                   @default(published)
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @default(now())
+  translations StatisticsTranslations[]
+  user         User?                    @relation(fields: [userId], references: [id])
+  userId       String?
+  count        Int                      @default(0)
+  orderNumber  Int?                     @default(0)
+  isDeleted    Boolean                  @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([count])
+  @@index([isDeleted, status])
+}
+
+model StatisticsTranslations {
+  id          Int         @id @default(autoincrement())
+  title       String
+  slug        String?     @unique
+  locale      Locales     @default(az)
+  document    Statistics? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  description String?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+// slider
+model Slider {
+  id           Int                  @id @default(autoincrement())
+  documentId   String               @unique @default(cuid())
+  isDeleted    Boolean              @default(false)
+  status       Status               @default(published)
+  imageId      Int?                 @unique
+  imageUrl     File?                @relation("SliderImg", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+  translations SliderTranslations[]
+  user         User?                @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model SliderTranslations {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  slug        String   @unique
+  locale      Locales  @default(az)
+  document    Slider?  @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+model CallAction {
+  id           Int    @id @default(autoincrement())
+  documentId   String @unique @default(cuid())
+  category     String
+  fullName     String
+  email        String
+  phone        String
+  typesProduct String
+  weight       String
+  dimensions   String
+
+  @@index([email])
+  @@index([phone])
+}
+
+// branches
+model Branch {
+  id           Int                 @id @default(autoincrement())
+  documentId   String              @unique @default(cuid())
+  isoCode      String              @unique // ISO A3 code (e.g., "AZE", "TUR", "USA")
+  status       BranchStatus        @default(ACTIVE)
+  isDeleted    Boolean             @default(false)
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  translations BranchTranslation[]
+  offices      Office[]
+  user         User?               @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isoCode])
+  @@index([status])
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model BranchTranslation {
+  id          Int      @id @default(autoincrement())
+  countryName String // e.g., "Azerbaijan", "Azərbaycan"
+  locale      Locales  @default(az)
+  branch      Branch?  @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([countryName])
+}
+
+model Office {
+  id           Int                 @id @default(autoincrement())
+  documentId   String              @unique @default(cuid())
+  latitude     Float?
+  longitude    Float?
+  isDeleted    Boolean             @default(false)
+  branch       Branch?             @relation(fields: [branchId], references: [documentId], onDelete: Cascade)
+  branchId     String?
+  type         BranchType?         @default(office)
+  translations OfficeTranslation[]
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+
+  @@index([branchId])
+  @@index([isDeleted])
+  @@index([latitude, longitude])
+}
+
+enum BranchType {
+  office
+  warehouse
+}
+
+model OfficeTranslation {
+  id               Int      @id @default(autoincrement())
+  documentId       String   @unique @default(cuid())
+  city             String
+  address          String?
+  locale           Locales
+  office           Office   @relation(fields: [officeDocumentId], references: [documentId], onDelete: Cascade)
+  officeDocumentId String // Bu field adı vacibdir
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@unique([officeDocumentId, locale], name: "office_locale_unique")
+  @@index([officeDocumentId])
+  @@index([locale])
+  @@index([city])
+}
+
+enum BranchStatus {
+  ACTIVE
+  PLANNED
+}
+
+// hero
+model Hero {
+  id           Int                @id @default(autoincrement())
+  documentId   String             @unique @default(cuid())
+  isDeleted    Boolean            @default(false)
+  status       Status             @default(published)
+  imageId      Int?               @unique
+  imageUrl     File?              @relation("heroFile", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  translations HeroTranslations[]
+  user         User?              @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model HeroTranslations {
+  id              Int      @id @default(autoincrement())
+  title           String
+  slug            String
+  description     String
+  badge           String
+  highlightWord   String
+  subtitle        String
+  locale          Locales  @default(az)
+  primaryButton   String
+  secondaryButton String
+  features        Json
+  statistics      Json
+  document        Hero?    @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// youtube media
+
+model Youtube {
+  id         Int     @id @default(autoincrement())
+  documentId String  @unique @default(cuid())
+  isDeleted  Boolean @default(false)
+  url        String
+  status     Status  @default(published)
+  imageId    Int?    @unique
+  imageUrl   File?   @relation("youtubeFile", fields: [imageId], references: [id], onDelete: SetNull)
+
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+  duration     String
+  translations YoutubeTranslations[]
+  user         User?                 @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model YoutubeTranslations {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  locale      Locales  @default(az)
+  document    Youtube? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+model PhotoGallery {
+  id           Int                        @id @default(autoincrement())
+  documentId   String                     @unique @default(cuid())
+  isDeleted    Boolean                    @default(false)
+  status       Status                     @default(published)
+  imageId      Int?                       @unique
+  imageUrl     File?                      @relation("photoGalleryFilesSingle", fields: [imageId], references: [id], onDelete: SetNull)
+  gallery      File[]                     @relation("photoGalleryFilesMulti")
+  createdAt    DateTime                   @default(now())
+  updatedAt    DateTime                   @updatedAt
+  translations PhotoGalleryTranslations[]
+  user         User?                      @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model PhotoGalleryTranslations {
+  id          Int           @id @default(autoincrement())
+  title       String
+  slug        String
+  description String?
+  locale      Locales       @default(az)
+  document    PhotoGallery? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// certificates
+
+model Certificates {
+  id           Int                        @id @default(autoincrement())
+  documentId   String                     @unique @default(cuid())
+  isDeleted    Boolean                    @default(false)
+  status       Status                     @default(published)
+  imageId      Int?                       @unique
+  imageUrl     File?                      @relation("certificatesFile", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime                   @default(now())
+  updatedAt    DateTime                   @updatedAt
+  translations CertificatesTranslations[]
+  user         User?                      @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model CertificatesTranslations {
+  id          Int           @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  locale      Locales       @default(az)
+  document    Certificates? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// testimonials
+
+model Testimonials {
+  id           Int                        @id @default(autoincrement())
+  documentId   String                     @unique @default(cuid())
+  isDeleted    Boolean                    @default(false)
+  status       Status                     @default(published)
+  imageId      Int?                       @unique
+  rate         Float
+  imageUrl     File?                      @relation("testimonialsFile", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime                   @default(now())
+  updatedAt    DateTime                   @updatedAt
+  company      String?
+  translations TestimonialsTranslations[]
+  user         User?                      @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([rate])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model TestimonialsTranslations {
+  id          Int           @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  nameSurname String
+  locale      Locales       @default(az)
+  document    Testimonials? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+  @@index([nameSurname])
+}
+
+// partners
+model Partners {
+  id           Int                    @id @default(autoincrement())
+  documentId   String                 @unique @default(cuid())
+  status       Status                 @default(published)
+  imageId      Int?                   @unique
+  imageUrl     File?                  @relation("partnersFiles", fields: [imageId], references: [id], onDelete: SetNull)
+  url          String?
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  translations PartnersTranslations[]
+  user         User?                  @relation(fields: [userId], references: [id])
+  userId       String?
+  isDeleted    Boolean                @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([isDeleted, status])
+  @@index([isDeleted, createdAt])
+}
+
+model PartnersTranslations {
+  id         Int       @id @default(autoincrement())
+  title      String
+  slug       String    @unique
+  locale     Locales   @default(az)
+  document   Partners? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+// hero
+model Features {
+  id           Int                    @id @default(autoincrement())
+  documentId   String                 @unique @default(cuid())
+  isDeleted    Boolean                @default(false)
+  status       Status                 @default(published)
+  videoId      Int?                   @unique
+  videoUrl     File?                  @relation("featuresFile", fields: [videoId], references: [id], onDelete: SetNull)
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  translations FeaturesTranslations[]
+  user         User?                  @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model FeaturesTranslations {
+  id          Int       @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  subtitle    String
+  locale      Locales   @default(az)
+  document    Features? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// position
+model Position {
+  id           Int                    @id @default(autoincrement())
+  documentId   String                 @unique @default(cuid())
+  status       Status                 @default(published)
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @default(now())
+  translations PositionTranslations[]
+  user         User?                  @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?                   @default(0)
+  isDeleted    Boolean                @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+}
+
+model PositionTranslations {
+  id                   Int                    @id @default(autoincrement())
+  title                String
+  slug                 String?                @unique
+  locale               Locales                @default(az)
+  document             Position?              @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId           String?
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
+  EmployeeTranslations EmployeeTranslations[]
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+// position
+model Employee {
+  id            Int                    @id @default(autoincrement())
+  documentId    String                 @unique @default(cuid())
+  status        Status                 @default(published)
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @default(now())
+  translations  EmployeeTranslations[]
+  user          User?                  @relation(fields: [userId], references: [id])
+  userId        String?
+  imageId       Int?                   @unique
+  imageUrl      File?                  @relation("employeeFiles", fields: [imageId], references: [id], onDelete: SetNull)
+  experience    Int?
+  orderNumber   Int?                   @default(0)
+  email         String?
+  isDeleted     Boolean                @default(false)
+  emailResponse Boolean?               @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([email])
+  @@index([experience])
+  @@index([isDeleted, status])
+}
+
+model EmployeeTranslations {
+  id                        Int                      @id @default(autoincrement())
+  title                     String
+  slug                      String?                  @unique
+  locale                    Locales                  @default(az)
+  document                  Employee?                @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId                String?
+  createdAt                 DateTime                 @default(now())
+  updatedAt                 DateTime                 @updatedAt
+  description               String?
+  position                  PositionTranslations     @relation(fields: [positionId], references: [id])
+  positionId                Int
+  ContactEnumTranslations   ContactEnumTranslations? @relation(fields: [contactEnumTranslationsId], references: [id])
+  contactEnumTranslationsId Int?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([positionId])
+  @@index([contactEnumTranslationsId])
+}
+
+// about
+model About {
+  id           Int                 @id @default(autoincrement())
+  documentId   String              @unique @default(cuid())
+  isDeleted    Boolean             @default(false)
+  status       Status              @default(published)
+  imageId      Int?                @unique
+  imageUrl     File?               @relation("AboutFile", fields: [imageId], references: [id], onDelete: SetNull)
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  translations AboutTranslations[]
+  user         User?               @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([isDeleted, status])
+}
+
+model AboutTranslations {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  badge       String
+  subtitle    String
+  locale      Locales  @default(az)
+  features    Json
+  advantages  Json
+  statistics  Json
+  document    About?   @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+}
+
+// services
+model Services {
+  id           Int                    @id @default(autoincrement())
+  documentId   String                 @unique @default(cuid())
+  isDeleted    Boolean                @default(false)
+  status       Status                 @default(published)
+  imageId      Int?                   @unique
+  imageUrl     File?                  @relation("servicesImage", fields: [imageId], references: [id], onDelete: SetNull)
+  iconsId      Int?                   @unique
+  iconsUrl     File?                  @relation("servicesIcons", fields: [iconsId], references: [id], onDelete: SetNull)
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  orderNumber  Int                    @default(0)
+  translations ServicesTranslations[]
+  user         User?                  @relation(fields: [userId], references: [id])
+  userId       String?
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+  @@index([isDeleted, orderNumber])
+}
+
+model ServicesTranslations {
+  id               Int       @id @default(autoincrement())
+  title            String
+  slug             String    @unique
+  description      String
+  features         Json
+  advantages       Json
+  fags             Json
+  shortDescription String
+  locale           Locales   @default(az)
+  document         Services? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId       String?
+  seo              Seo?      @relation(fields: [seoId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  seoId            Int?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+  @@index([title])
+  @@index([seoId])
+}
+
+// section
+model SectionCta {
+  id           Int                      @id @default(autoincrement())
+  documentId   String                   @unique @default(cuid())
+  status       Status                   @default(published)
+  key          String?                  @unique
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @default(now())
+  translations SectionCtaTranslations[]
+  user         User?                    @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?                     @default(0)
+  isDeleted    Boolean                  @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([key])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+  @@index([isDeleted, key])
+}
+
+model SectionCtaTranslations {
+  id          Int         @id @default(autoincrement())
+  title       String
+  slug        String?
+  subTitle    String?
+  locale      Locales     @default(az)
+  document    SectionCta? @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId  String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  description String?
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}
+
+enum Locales {
+  // Azərbaycan və region
+  az @map("az") // Azərbaycanca
+  tr @map("tr") // Türkcə
+  ru @map("ru") // Rusca
+
+  // Avropa dilləri
+  en @map("en") // İngiliscə
+  de @map("de") // Almanca
+  fr @map("fr") // Fransızca
+  es @map("es") // İspanca
+  it @map("it") // İtalyanca
+  pt @map("pt") // Portuqalca
+  nl @map("nl") // Hollandca
+  pl @map("pl") // Polyakca
+  uk @map("uk") // Ukraynaca
+  cs @map("cs") // Çexcə
+  sk @map("sk") // Slovakca
+  ro @map("ro") // Rumınca
+  bg @map("bg") // Bolqarca
+  el @map("el") // Yunanca
+  sv @map("sv") // İsveçcə
+  no @map("no") // Norveçcə
+  da @map("da") // Datca
+  fi @map("fi") // Fincə
+  hu @map("hu") // Macarca
+
+  // Asiya dilləri
+  zh @map("zh") // Çincə
+  ja @map("ja") // Yaponca
+  ko @map("ko") // Koreyaca
+  hi @map("hi") // Hindcə
+  th @map("th") // Tayca
+  vi @map("vi") // Vyetnamca
+  id @map("id") // İndoneziyaca
+  ms @map("ms") // Malayca
+
+  // Yaxın Şərq dilləri
+  ar @map("ar") // Ərəbcə
+  fa @map("fa") // Farsca
+  he @map("he") // İvrit
+
+  // Digər populyar dillər
+  bn @map("bn") // Benqalca
+  ur @map("ur") // Urduca
+  sw @map("sw") // Suahili
+  am @map("am") // Amharca
+
+  // CIS ölkələri
+  kk @map("kk") // Qazaxca
+  uz @map("uz") // Özbəkçə
+  ky @map("ky") // Qırğızca
+  tg @map("tg") // Tacikçə
+  tk @map("tk") // Türkmənçə
+  ka @map("ka") // Gürcücə
+  hy @map("hy") // Ermənicə
+  be @map("be") // Belarusca
+
+  // Balkan dilləri
+  sr @map("sr") // Serbcə
+  hr @map("hr") // Xorvatca
+  bs @map("bs") // Bosniyaca
+  sl @map("sl") // Slovencə
+  mk @map("mk") // Makedonca
+  sq @map("sq") // Albanca
+}
+
+model ContactInformation {
+  id          Int      @id @default(autoincrement())
+  documentId  String   @unique @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  phone       String
+  phoneSecond String?
+  latitude    String?
+  longitude   String?
+  adressLink  String
+  whatsapp    String
+  email       String
+
+  translations ContactInformationTranslation[]
+  user         User?                           @relation(fields: [userId], references: [id])
+  userId       String?
+
+  isDeleted Boolean @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([phone])
+  @@index([email])
+  @@index([userId])
+}
+
+model ContactInformationTranslation {
+  id          Int                @id @default(autoincrement())
+  adress      String
+  title       String
+  description String
+  workHours   String
+  documentId  String             @unique @default(cuid())
+  tag         String?
+  support     String
+  locale      Locales            @default(az)
+  document    ContactInformation @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  @@unique([documentId, locale])
+  @@index([locale])
+  @@index([title])
+}
+
+// price offer
+model PriceOffer {
+  id           Int      @id @default(autoincrement())
+  documentId   String   @unique @default(cuid())
+  isDeleted    Boolean  @default(false)
+  status       Status   @default(published)
+  assignedTo   String
+  fullName     String
+  email        String
+  phone        String
+  typesProduct String
+  weight       String
+  dimensions   String
+  message      String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([email])
+  @@index([phone])
+  @@index([assignedTo])
+}
+
+// contact us
+model ContactUs {
+  id         Int      @id @default(autoincrement())
+  documentId String   @unique @default(cuid())
+  isDeleted  Boolean  @default(false)
+  status     Status   @default(published)
+  fullName   String
+  email      String
+  phone      String
+  subject    String
+  message    String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([isDeleted])
+  @@index([status])
+  @@index([createdAt])
+  @@index([email])
+  @@index([phone])
+}
+
+// contact enum
+model ContactEnum {
+  id           Int                       @id @default(autoincrement())
+  documentId   String                    @unique @default(cuid())
+  status       Status                    @default(published)
+  createdAt    DateTime                  @default(now())
+  updatedAt    DateTime                  @default(now())
+  translations ContactEnumTranslations[]
+  user         User?                     @relation(fields: [userId], references: [id])
+  userId       String?
+  orderNumber  Int?                      @default(0)
+  isDeleted    Boolean                   @default(false)
+
+  @@index([isDeleted])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([isDeleted, status])
+}
+
+model ContactEnumTranslations {
+  id                   Int                    @id @default(autoincrement())
+  title                String
+  slug                 String?                @unique
+  locale               Locales                @default(az)
+  document             ContactEnum?           @relation(fields: [documentId], references: [documentId], onDelete: Cascade)
+  documentId           String?
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
+  EmployeeTranslations EmployeeTranslations[]
+
+  @@unique([documentId, locale])
+  @@index([title])
+  @@index([locale])
+  @@index([documentId])
+  @@index([slug])
+}

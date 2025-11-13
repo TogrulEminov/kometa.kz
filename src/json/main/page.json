@@ -1,0 +1,130 @@
+{
+  "routing": [
+    {
+      "value": "",
+      "label": "Boş saxla"
+    },
+    {
+      "value": "home",
+      "label": "Ana səhifə"
+    },
+    {
+      "value": "services",
+      "label": "Xidmətlərimiz"
+    },
+    {
+      "value": "blog",
+      "label": "Bloqlar"
+    },
+    {
+      "value": "about",
+      "label": "Haqqımızda"
+    },
+    {
+      "value": "certificates",
+      "label": "Sertifikatlar"
+    },
+    {
+      "value": "media",
+      "label": "Medya video"
+    },
+    {
+      "value": "gallery",
+      "label": "Qalereya"
+    },
+    {
+      "value": "contact",
+      "label": "Əlaqə"
+    },
+    {
+      "value": "partner",
+      "label": "Partnyorlar"
+    }
+  ],
+  "categories": [
+    {
+      "value": "home",
+      "label": "Ana səhifə"
+    },
+    {
+      "value": "services",
+      "label": "Xidmətlərimiz"
+    },
+    {
+      "value": "blog",
+      "label": "Bloqlar"
+    },
+    {
+      "value": "about",
+      "label": "Haqqımızda"
+    },
+    {
+      "value": "certificates",
+      "label": "Sertifikatlar"
+    },
+    {
+      "value": "media",
+      "label": "Medya video"
+    },
+    {
+      "value": "gallery",
+      "label": "Qalereya"
+    },
+    {
+      "value": "partner",
+      "label": "Partnyorlar"
+    },
+    {
+      "value": "contact",
+      "label": "Əlaqə"
+    }
+  ],
+  "sectionsContent": [
+    {
+      "value": "services",
+      "label": "Xidmətlər bölümü"
+    },
+    {
+      "value": "process",
+      "label": "Prosess bölümü"
+    },
+    {
+      "value": "partners",
+      "label": "Partnyorlar bölümü"
+    },
+    {
+      "value": "blog",
+      "label": "Bloqlar bölümü"
+    },
+    {
+      "value": "media",
+      "label": "Media bölümü"
+    },
+    {
+      "value": "branches",
+      "label": "Filiallar bölümü"
+    },
+    {
+      "value": "testimonials",
+      "label": "Rəy bölümü"
+    },
+    {
+      "value": "fag",
+      "label": "Suallar bölümü"
+    },
+    {
+      "value": "employee",
+      "label": "Əməkdaşlar bölümü"
+    }
+  ],
+  "titleImage": [
+    {
+      "value": "title-first",
+      "label": "Başlıq birinci gəlsin"
+    },
+    {
+      "value": "image-first",
+      "label": "Şəkil birinci gəlsin"
+    }
+  ]
+}

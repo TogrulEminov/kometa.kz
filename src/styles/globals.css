@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-dmsans: var(--font-dmsans);
+  --shadow-1: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 82.409px 101.799px -58.171px rgba(226, 238, 249, 0.6);
+  --shadow-3: 0 0.244px 0.244px 0 rgba(0, 0, 0, 0.1) inset;
+  --ease-border: border-color 0.3s ease;
+  --ease-background: background-color 0.3s ease;
+  --ease-in-out: 0.3s ease-in-out;
+  --ease-color: color 0.3s ease;
+  --spacing-100: 100px;
+
+  --color-ui-1: #003751;
+  --color-ui-2: #dee2e6;
+  --color-ui-3: #f5f5f5;
+  --color-ui-4: #0c7fa3; /* Əvvəlki: #159dd1 - Daha tünd mavi (4.5:1 contrast) */
+  --color-ui-5: #effaff;
+  --color-ui-6: #f7f7f7;
+  --color-ui-7: #575a7b;
+  --color-ui-8: #f4f4f4;
+  --color-ui-9: #ececec;
+  --color-ui-10: #f8f9fa;
+  --color-ui-11: #336fb3;
+}
+@layer utilities {
+  .scrollbarHidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .container {
+    @apply mx-auto px-4;
+  }
+  .global-heading-style {
+    @apply text-[30px] lg:text-4xl mb-5 text-ui-1 -tracking-tight font-bold;
+  }
+  .global-grid-style {
+    @apply grid grid-cols-1 gap-5;
+  }
+  .checkboxContainer {
+    @apply flex items-center gap-2.5;
+  }
+  .checkboxContainer_input {
+    @apply appearance-none cursor-pointer w-5 h-5 border border-[#2563eb] rounded-sm  checked:bg-[#2563eb];
+  }
+  .checkboxContainer_text {
+    @apply text-[#171717] font-medium text-base;
+  }
+  .btnArea {
+    @apply grid grid-cols-2 gap-5;
+  }
+  .global-span {
+    @apply text-sm lg:text-base  capitalize text-ui-4 font-normal;
+  }
+  .global-strong {
+    @apply text-2xl md:text-4xl lg:text-5xl text-ui-1 font-bold;
+  }
+  .global-pharagraph {
+    @apply text-base font-normal  text-ui-7;
+  }
+  .global-link {
+    @apply min-h-10 min-w-20 max-w-fit flex items-center justify-center bg-ui-4 transition-all ease-in-out duration-500 hover:bg-transparent border border-ui-4 hover:text-ui-4 text-white rounded-[2px] px-4 py-2;
+  }
+  .contactListItem {
+    @apply flex items-center gap-2.5;
+  }
+  .services_list {
+    h2 {
+      @apply text-ui-1 font-bold;
+    }
+    ul {
+      @apply grid grid-cols-2 gap-3  rounded-lg p-6;
+      li {
+        @apply gap-x-3 p-3 flex flex-wrap items-center bg-ui-10 rounded text-base font-medium text-ui-1 before:block before:w-1.5 before:h-1.5  before:rounded-full  before:bg-ui-4;
+      }
+    }
+    ol {
+      @apply grid grid-cols-2 gap-3 p-6;
+      li {
+        @apply flex flex-wrap items-center p-3 bg-ui-10 rounded text-base font-medium text-ui-1 before:block before:w-1.5 before:h-1.5  before:rounded-full  before:bg-ui-4;
+      }
+    }
+  }
+}
+
+.noImage::before {
+  @apply text-4xl mr-2; /* Font size and margin-right (spacing between icon and text) */
+  content: "🚫"; /* The icon/content */
+}
+body {
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-family: var(--font-dmsans);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1180px !important;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+.bg-gradient-dark-primary:before {
+  opacity: 0.85;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #003751;
+  background-image: linear-gradient(
+    to right top,
+    #003751,
+    #003751,
+    #003751,
+    #003751,
+    #159dd1
+  );
+}
+.bg-gradient-2 {
+  background: linear-gradient(
+    92.43deg,
+    #11426b -2.86%,
+    rgba(17, 66, 107, 0.62) 43.07%,
+    rgba(161, 49, 57, 0.18) 98.17%,
+    rgba(17, 66, 107, 0.18) 98.17%
+  );
+}
+@utility scrollbar-hidden {
+  @apply [scrollbar-width:none];
+}
+@utility scrollbar-thin {
+  @apply [scrollbar-width:thin];
+}
+@utility scrollbar-color {
+  @apply [scrollbar-color:#159dd1_#f1f1f1];
+}
+.process-num {
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: transparent;
+  stroke-width: 10px;
+  -webkit-text-stroke-width: 1px;
+  stroke: #808080;
+  -webkit-text-stroke-color: #808080;
+  opacity: 15%;
+  transition: all 0.4s ease-in-out;
+}
+.polygon {
+  --clip-size: 35px;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--clip-size)),
+    calc(100% - var(--clip-size)) 100%,
+    0 100%
+  );
+}
+/* Hero Image Animations */
+@keyframes kenburns {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.hero-kenburns {
+  animation: kenburns 25s ease-in-out infinite;
+}
+
+.hero-glow {
+  animation: glow 8s ease-in-out infinite;
+}
+@layer utilities {
+  .hero-bg-fixed {
+    @apply absolute inset-0;
+    background-image: url("/assets/transportation-image.webp");
+    background-attachment: fixed;
+    background-size: 1920px auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-bg-fixed {
+      background-position: 50% 0%;
+    }
+  }
+}

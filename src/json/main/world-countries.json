@@ -1,0 +1,127 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "AZ",
+        "ISO_A3": "AZE",
+        "NAME": "Azerbaijan",
+        "NAME_AZ": "Azərbaycan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [44.7939896583, 41.2481842041],
+            [45.1007518768, 41.2581863403],
+            [45.1787796021, 41.1489257812],
+            [44.7939896583, 41.2481842041]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "TR",
+        "ISO_A3": "TUR",
+        "NAME": "Turkey",
+        "NAME_AZ": "Türkiyə"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [26.0433512926, 41.2481842041],
+            [36.1007518768, 41.2581863403],
+            [42.1787796021, 36.1489257812],
+            [26.0433512926, 41.2481842041]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "RU",
+        "ISO_A3": "RUS",
+        "NAME": "Russia",
+        "NAME_AZ": "Rusiya"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [27.0433512926, 55.2481842041],
+            [180.1007518768, 70.2581863403],
+            [160.1787796021, 46.1489257812],
+            [27.0433512926, 55.2481842041]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "CN",
+        "ISO_A3": "CHN",
+        "NAME": "China",
+        "NAME_AZ": "Çin"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [73.557692308, 39.5428259962],
+            [135.085106383, 53.5609765625],
+            [120.148148148, 21.2962962963],
+            [73.557692308, 39.5428259962]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "US",
+        "ISO_A3": "USA",
+        "NAME": "United States",
+        "NAME_AZ": "ABŞ"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-125.0, 48.0],
+            [-66.0, 48.0],
+            [-66.0, 25.0],
+            [-125.0, 25.0],
+            [-125.0, 48.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A2": "DE",
+        "ISO_A3": "DEU",
+        "NAME": "Germany",
+        "NAME_AZ": "Almaniya"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [5.866315, 55.755955],
+            [15.041896, 55.755955],
+            [15.041896, 47.270111],
+            [5.866315, 47.270111],
+            [5.866315, 55.755955]
+          ]
+        ]
+      }
+    }
+  ]
+}

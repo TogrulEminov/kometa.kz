@@ -1,0 +1,80 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 500;
+  color: #171717;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btnArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 500px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checkbox-də seçili olduğunda stil */
+.checkboxContainer input[type="checkbox"]:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.checkboxContainer input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Text stil */
+.checkboxContainer span {
+  font-size: 16px;
+  color: #333;
+}

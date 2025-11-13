@@ -1,0 +1,14 @@
+{
+  "az": [
+    { "value": "desc", "label": "Ən yeni" },
+    { "value": "asc", "label": "Ən köhnə" }
+  ],
+  "en": [
+    { "value": "desc", "label": "Newest" },
+    { "value": "asc", "label": "Oldest" }
+  ],
+  "ru": [
+    { "value": "desc", "label": "Самые новые" },
+    { "value": "asc", "label": "Самые старые" }
+  ]
+}

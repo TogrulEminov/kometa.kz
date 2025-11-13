@@ -1,0 +1,203 @@
+{
+  "home": "home",
+  "share": "Share",
+  "moreAbout": "Learn more",
+  "more": "More",
+  "star": "star",
+  "select": {
+    "main": "Select...",
+    "sorting": "Sorting"
+  },
+  "stage": "Stage",
+  "shareText": "You can share this link with your friends",
+  "noResult": {
+    "title": "No results found for your search",
+    "description": "The information you were looking for was not found. Please try again with a different query!"
+  },
+  "noResultComponent": {
+    "title": "No data found",
+    "description": "There is no information available here yet. It will be updated soon!",
+    "btn": "Return to homepage"
+  },
+  "pages": {
+    "home": "Home",
+    "services": "Our Services",
+    "about": "About Us",
+    "certificates": "Certificates",
+    "media": "Media",
+    "photo-gallery": "Photo Gallery",
+    "video-gallery": "Video Gallery",
+    "blog": "Blog",
+    "contact": "Contact",
+    "partner": "Partners"
+  },
+  "contactUs": "Contact Us",
+  "sidebar": {
+    "phone": "Phone",
+    "email": "Email",
+    "socials": "Social Media"
+  },
+  "callAction": {
+    "title": "Get a Free Quote",
+    "description": "Receive the best rates for your shipments within 24 hours",
+    "features": {
+      "one": {
+        "title": "Fast Response",
+        "description": "Get your personalized quote within 24 hours"
+      },
+      "two": {
+        "title": "Competitive Prices",
+        "description": "Best rates for air, sea and land transportation"
+      },
+      "three": {
+        "title": "Professional Support",
+        "description": "Our logistics team available 24/7, every day of the week"
+      }
+    },
+    "success": {
+      "title": "Thank You for Your Request!",
+      "description": "We have received your shipment inquiry. Our logistics team will contact you with a personalized quote within 24 hours."
+    },
+    "form": {
+      "category": "Select Cargo Type",
+      "fullName": "Full Name",
+      "email": "Your email address",
+      "phone": "Phone",
+      "typesProduct": "Product Type",
+      "weight": "Weight",
+      "dimensions": "Dimensions",
+      "sending": "Sending...",
+      "getOrder": "Get Your Quote"
+    }
+  },
+  "reliability": {
+    "title": "Innovative for smarter transportation",
+    "words": ["logistics", "delivery", "shipping"],
+    "question": "Do you have any questions?"
+  },
+  "branches": {
+    "noInformation": "No information available",
+    "countries": "Countries",
+    "activeCountry": "Active Countries",
+    "plannedCount": "Plans for New Markets",
+    "totalOffices": "All Our Office Networks",
+    "loadingMap": "Loading map...",
+    "office": "Office",
+    "mapComment": "Map Comment",
+    "activeCountryCountry": "Active Country",
+    "otherCountry": "Other Countries",
+    "warehouse": "Warehouse",
+    "plannedSpread": "Planned Expansion",
+    "modal": {
+      "active": "Active network",
+      "planned": "Planned",
+      "activety": "In operation",
+      "officeAddres": "Office Addresses",
+      "allWarehouse": "List of all warehouses",
+      "locations": "Locations",
+      "warehouseAddress": "Warehouse Addresses",
+      "allOffice": "List of all branches"
+    }
+  },
+  "footer": {
+    "pharagraph": "We have been the most reliable transportation partner for over 25 years.",
+    "pages": "Pages",
+    "contactUs": "Contact Us",
+    "copyright": "Profi Transport. All rights reserved."
+  },
+  "contactForm": {
+    "haveQuestion": "Have a question?",
+    "questionContentDesc": "Contact us easily and receive a professional response.",
+    "enterInformation": "Enter Your Information",
+    "addInfo": "Write your name, email and phone number",
+    "writeMessage": "Write Your Message",
+    "messageContent": "Describe your needs in detail",
+    "subject": "Select a subject",
+    "sendWaiting": "Send and Wait for Response",
+    "waitingContent": "We will contact you within 24 hours",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "phoneTitle": "Phone",
+    "phoneSupport": "24/7 support line",
+    "emailTitle": "Email",
+    "emailSupport": "Response within 2 hours",
+    "seeMap": "View on map",
+    "wpTitle": "WhatsApp",
+    "officeHours": "Office Hours",
+    "online": "Online",
+    "onlineSupport": "Online support is active - we will respond within 24 hours",
+    "emergencySupport": "Emergency Support",
+    "wpDescription": "Instant response - fastest way to communicate",
+    "workTitle": "Working Hours",
+    "workDescription": "Our office and support hours",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Your email address",
+      "phone": "Phone",
+      "message": "Write your message here..."
+    },
+    "offices": {
+      "subtitle": "Our global network",
+      "title": "Our International Branches",
+      "description": "At your service in {count} countries worldwide"
+    },
+    "message": {
+      "title": "your message has been successfully sent!",
+      "description": "thank you for contacting us. Our support team will contact you shortly."
+    }
+  },
+  "cta": {
+    "contactUs": "Contact us",
+    "callUs": "Call now",
+    "whatsapp": "WhatsApp",
+    "email": "Send email",
+    "advise": "Get advice",
+    "services": "Our Services",
+    "aboutUs": "About Us",
+    "lookChannel": "Visit our channel",
+    "share": "Share"
+  },
+  "certificatesPage": {
+    "logisticsManagments": "Safety standards",
+    "standart": "Logistics management",
+    "technology": "Technology compliance"
+  },
+  "blogPage": {
+    "weeklyUptade": "Updated weekly",
+    "date": "Date",
+    "reading": "Reading",
+    "view": "Views",
+    "tegs": "Tags",
+    "returnOther": "Return to all articles",
+    "before": "Previous",
+    "latest": "Next"
+  },
+  "servicesPage": {
+    "one": "Transportation services",
+    "two": "Warehouse solutions",
+    "three": "Customs services",
+    "four": "Our Services",
+    "five": "Contact information",
+    "email": "Our Email Address",
+    "phone": "Phone",
+    "adress": "Our Address",
+    "support": "24/7 customer support",
+    "six": "Our team is ready to help you with any questions",
+    "moreAbout": "More information",
+    "features": "Features",
+    "advantages": "Why choose us?",
+    "fag": "Frequently Asked Questions"
+  },
+  "employeeData": {
+    "one": "Professional",
+    "two": "Experienced",
+    "three": "Reliable",
+    "four": "Professional specialist"
+  },
+  "mediaData": {
+    "one": "Loading from YouTube"
+  },
+  "partnersSection": {
+    "one": "Our reliable cooperation network"
+  }
+}

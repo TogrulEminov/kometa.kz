@@ -1,0 +1,130 @@
+"use client";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useTransition } from "react";
+import FieldBlock from "@/src/app/(dashboard)/manage/_components/contentBlock";
+import CustomAdminInput from "@/src/app/(dashboard)/manage/_components/createInput";
+import CustomAdminEditor from "@/src/app/(dashboard)/manage/_components/CreateEditor";
+import NavigateBtn from "@/src/app/(dashboard)/manage/_components/navigateBtn";
+import CreateButton from "@/src/app/(dashboard)/manage/_components/createButton";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CustomLocales } from "@/src/services/interface";
+import { useMessageStore } from "@/src/hooks/useMessageStore";
+import { useForm } from "react-hook-form";
+import {
+  CreateStatisticsInput,
+  createStatisticsSchema,
+} from "@/src/schema/statistics.schema";
+import { createStatistics } from "@/src/actions/client/statistics.actions";
+
+export default function CreateStatistics() {
+  const searchParams = useSearchParams();
+  const locale = searchParams?.get("locale") ?? "az";
+  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+  const { success, error } = useMessageStore();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isDirty },
+    setValue,
+    watch,
+    reset,
+  } = useForm<CreateStatisticsInput>({
+    resolver: zodResolver(createStatisticsSchema),
+    defaultValues: {
+      title: "",
+      description: "",
+      orderNumber: 0,
+      count: 0,
+      locale: locale as CustomLocales,
+    },
+  });
+  const description = watch("description");
+
+  const onSubmit = async (data: CreateStatisticsInput) => {
+    startTransition(async () => {
+      const result = await createStatistics({
+        ...data,
+        orderNumber: Number(data.orderNumber),
+        count: Number(data.count),
+      });
+
+      if (result.success) {
+        success("Məlumat uğurla yadda saxlandı!");
+        reset();
+        router.back();
+        router.refresh();
+      } else {
+        error(result.error || "Məlumat göndərilərkən xəta baş verdi.");
+      }
+    });
+  };
+
+  return (
+    <>
+      <section className={"flex flex-col gap-4 mb-5"}>
+        <h1 className="font-medium text-[#171717] text-3xl mb-8">
+          {locale === "az"
+            ? "Azərbaycan dilində daxil  et"
+            : locale === "en"
+            ? "İngilis dilində daxil et"
+            : "Rus dilində daxil et"}
+        </h1>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className={"grid grid-cols-1 gap-5"}
+        >
+          <div className={"flex flex-col space-y-5"}>
+            <FieldBlock>
+              <CustomAdminInput
+                title="Başlıq"
+                placeholder="Başlıq"
+                required={true}
+                error={errors.title?.message}
+                {...register("title")}
+              />
+              <CustomAdminInput
+                title="Statistik ədəd daxil edin"
+                placeholder="0 - 1000"
+                required={true}
+                type="number"
+                min={0}
+                error={errors.count?.message}
+                {...register("count", { valueAsNumber: true })}
+              />
+              <CustomAdminInput
+                title="Sıra nömrəsi"
+                placeholder="0 - 100"
+                required={true}
+                type="number"
+                min={0}
+                error={errors.orderNumber?.message}
+                {...register("orderNumber", { valueAsNumber: true })}
+              />
+              <CustomAdminEditor
+                title="Qısa məlumat"
+                value={description}
+                onChange={(value) =>
+                  setValue("description", value, {
+                    shouldValidate: true,
+                    shouldDirty: true,
+                  })
+                }
+                error={errors.description?.message}
+              />
+            </FieldBlock>
+          </div>
+          <div className={"flex flex-col space-y-5"}>
+            <div className={"grid grid-cols-2 gap-5"}>
+              <NavigateBtn />
+              <CreateButton
+                isLoading={isPending}
+                disabled={!isDirty || isPending}
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </>
+  );
+}

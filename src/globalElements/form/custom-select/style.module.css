@@ -1,0 +1,83 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.label :global(.ant-select-selection-item) {
+  font-family: var(--font-inter);
+}
+.label :global(.ant-select-selector) {
+  padding: 0 !important;
+}
+.label .title {
+  color: #f8f7f7;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+.error {
+  border: red;
+}
+.select {
+  display: flex;
+  min-height: 55px;
+  height: fit-content;
+  padding: 20px 18px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #9e9293;
+  background: transparent;
+  position: relative;
+  backdrop-filter: blur(3.253246784210205px);
+  border-radius: 8px;
+}
+.select .suffixIcon {
+  stroke: #f8f7f7;
+}
+.select :global(.ant-select-selection-item) {
+  color: #9e9293;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 22.5px */
+}
+.select .option {
+  width: 100%;
+}
+.ant-select:focus {
+  border: none;
+}
+.ant-select:focus-visible {
+  outline: none;
+}
+.ant-select-arrow {
+  right: 22px;
+}
+
+.selects :global(.ant-select-single.ant-select-lg .ant-select-selector) {
+  color: #9e9293;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  flex-shrink: 0;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+}
+.selects :global(.ant-select) {
+  border-radius: 10px;
+  border: 1px solid #9e9293;
+  position: relative !important;
+}
+
+.selects :global(.ant-select .ant-select-arrow) {
+  color: #9e9293;
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "tiktok",
+    "title": "TikTok",
+    "placeHolder": "TikTok hesabınızı daxil edin"
+  },
+  {
+    "name": "whatsapp",
+    "title": "WhatsApp",
+    "placeHolder": "WhatsApp nömrənizi daxil edin"
+  },
+  {
+    "name": "instagram",
+    "title": "İnstagram",
+    "placeHolder": "İnstagram hesabınızı daxil edin"
+  },
+  {
+    "name": "twitter",
+    "title": "Twitter",
+    "placeHolder": "Twitter hesabınızı daxil edin"
+  },
+  {
+    "name": "linkedin",
+    "title": "LinkedIn",
+    "placeHolder": "LinkedIn hesabınızı daxil edin"
+  },
+  {
+    "name": "youtube",
+    "title": "YouTube",
+    "placeHolder": "YouTube hesabınızı daxil edin"
+  },
+  {
+    "name": "facebook",
+    "title": "Facebook",
+    "placeHolder": "Facebook hesabınızı daxil edin"
+  },
+  {
+    "name": "telegram",
+    "title": "Telegram",
+    "placeHolder": "Telegram hesabınızı daxil edin"
+  }
+]

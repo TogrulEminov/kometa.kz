@@ -1,0 +1,206 @@
+{
+  "home": "home",
+  "share": "Paylaş",
+  "moreAbout": "Ətraflı",
+  "more": "Daha çox",
+  "star": "ulduz",
+  "select": {
+    "main": "Seçin...",
+    "sorting": "Sıralama"
+  },
+  "stage": "Mərhələ",
+  "shareText": "Bu linki dostlarınızla paylaşa bilərsiniz",
+  "noResult": {
+    "title": "Axtarışınıza uyğun nəticə tapılmadı",
+    "description": "Axtardığınız məlumat tapılmadı. Başqa sorğu ilə yenidən cəhd edin!"
+  },
+  "noResultComponent": {
+    "title": "Məlumat tapılmadı",
+    "description": "Burada hələ heç bir məlumat mövcud deyil. Tezliklə yenilənəcək!",
+    "btn": "Ana səhifəyə qayıt"
+  },
+  "pages": {
+    "home": "Ana səhifə",
+    "services": "Xidmətlərimiz",
+    "about": "Haqqımızda",
+    "certificates": "Sertifikatlar",
+    "media": "Media",
+    "photo-gallery": "Foto Qalereya",
+    "video-gallery": "Video Qalereya",
+    "blog": "Bloq",
+    "contact": "Əlaqə",
+    "partner": "Tərəfdaşlar"
+  },
+  "contactUs": "Bizimlə əlaqə",
+  "sidebar": {
+    "phone": "Telefon",
+    "email": "E-poçt",
+    "socials": "Sosial şəbəkələr"
+  },
+  "callAction": {
+    "title": "Pulsuz qiymət təklifi alın",
+    "description": "Yükləriniz üçün ən yaxşı qiymətləri qısa zaman ərzində əldə edin",
+    "features": {
+      "one": {
+        "title": "Sürətli cavab",
+        "description": "Şəxsi təklifinizi qısa zaman ərzində əldə edin"
+      },
+      "two": {
+        "title": "Rəqabətli qiymətlər",
+        "description": "Hava, dəniz və quru yolu daşınması üçün ən yaxşı qiymətlər"
+      },
+      "three": {
+        "title": "Peşəkar dəstək",
+        "description": "Logistika komandamız həftənin hər günü 24/7 xidmətinizdədir"
+      }
+    },
+    "success": {
+      "title": "Müraciətiniz üçün təşəkkür edirik!",
+      "description": "Göndərdiyiniz yükləmə sorğusunu qəbul etdik. Logistika komandamız Ən uyğun vaxtda şəxsi təkliflə sizinlə əlaqə saxlayacaq."
+    },
+    "form": {
+      "category": "Yük növünü seçin",
+      "fullName": "Ad, Soyad",
+      "email": "Email ünvanınız",
+      "phone": "Telefon",
+      "typesProduct": "Malın növü",
+      "weight": "Çəkisi",
+      "dimensions": "Ölçülər",
+      "sending": "Göndərilir...",
+      "getOrder": "Qiymət təklifinizi alın"
+    }
+  },
+
+  "reliability": {
+    "title": "Daha ağıllı daşıma üçün innovativ",
+    "words": ["logistika", "çatdırılma", "göndəriş"],
+    "question": "Sualınız var?"
+  },
+  "branches": {
+    "noInformation": "Məlumat mövcud deyil",
+    "countries": "Ölkələr",
+    "activeCountry": "Fəaliyyətdə olan ölkələr",
+    "plannedCount": "Yeni bazarlar üzrə planlar",
+    "totalOffices": "Bütün ofis şəbəkələrimiz",
+    "loadingMap": "Xəritə yüklənir...",
+    "office": "Ofis",
+    "mapComment": "Xəritə şərhi",
+    "activeCountryCountry": "Fəal ölkə",
+    "otherCountry": "Digər ölkələr",
+    "warehouse": "Anbar",
+    "plannedSpread": "Planlaşdırılan genişlənmə",
+    "modal": {
+      "active": "Aktiv şəbəkə",
+      "planned": "Planlaşdırılan",
+      "activety": "Fəaliyyətdə",
+      "officeAddres": "Ofis ünvanları",
+      "locations": "Məkanlar",
+      "warehouseAddress": "Anbar ünvanları",
+      "allWarehouse": "Bütün anbarların siyahısı",
+      "allOffice": "Bütün filialların siyahısı"
+    }
+  },
+  "footer": {
+    "pharagraph": "Biz 25+ ildən bəri ən etibarlı nəqliyyat tərəfdaşıyıq.",
+    "pages": "Səhifələr",
+    "contactUs": "Bizimlə əlaqə",
+    "copyright": "Profi Transport. Bütün hüquqlar qorunur."
+  },
+  "contactForm": {
+    "haveQuestion": "Sualınız var?",
+    "questionContentDesc": "Sadə proseslə bizimlə əlaqə saxlayın və professional cavab alın",
+    "enterInformation": "Məlumatlarınızı daxil edin",
+    "addInfo": "Adınızı, email və telefon nömrənizi yazın",
+    "writeMessage": "Mesajınızı yazın",
+    "messageContent": "Ehtiyaclarınızı ətraflı şəkildə bildirin",
+    "subject": "Mövzu seçin",
+    "sendWaiting": "Göndərin və cavab gözləyin",
+    "waitingContent": "Ən uyğun vaxtda sizinlə əlaqə saxlayacağıq",
+    "sending": "Göndərilir...",
+    "send": "Mesajı göndər",
+    "phoneTitle": "Telefon",
+    "phoneSupport": "24/7 dəstək xətti",
+    "emailTitle": "Email",
+    "emailSupport": "2 saat ərzində cavab",
+    "seeMap": "Xəritədə bax",
+    "wpTitle": "WhatsApp",
+    "officeHours": "Ofis saatları",
+    "online": "Onlayn",
+    "emergencySupport": "Təcili dəstək",
+    "wpDescription": "Dərhal cavab - ən sürətli ünsiyyət yolu",
+    "workTitle": "İş saatları",
+    "workDescription": "Ofis və dəstək saatlarımız",
+    "form": {
+      "fullName": "Ad, Soyad",
+      "email": "Email ünvanınız",
+      "phone": "Telefon",
+      "message": "Mesajınızı buraya yazın..."
+    },
+    "offices": {
+      "subtitle": "Qlobal şəbəkəmiz",
+      "title": "Beynəlxalq filiallarımız",
+      "description": "Dünya üzrə {count} ölkədə xidmətinizdəyik"
+    },
+    "message": {
+      "title": "Mesajınız Uğurla Göndərildi!",
+      "description": "Bizimlə əlaqə qurduğunuz üçün təşəkkür edirik. Dəstək komandamız qısa zamanda sizinlə əlaqə saxlayacaq."
+    }
+  },
+  "cta": {
+    "contactUs": "Bizimlə əlaqə",
+    "callUs": "İndi zəng edin",
+    "whatsapp": "WhatsApp",
+    "email": "Email göndər",
+    "advise": "Məsləhət alın",
+    "services": "Xidmətlərimiz",
+    "aboutUs": "Haqqımızda",
+    "lookChannel": "Kanalımıza baxın",
+    "share": "Paylaş"
+  },
+  "certificatesPage": {
+    "logisticsManagments": "Təhlükəsizlik standartları",
+    "standart": "Logistika idarəetməsi",
+    "technology": "Texnoloji uyğunluq"
+  },
+  "blogPage": {
+    "weeklyUptade": "Həftəlik yenilənir",
+    "date": "Tarix",
+    "reading": "Oxuma",
+    "view": "Baxış",
+    "tegs": "Teqlər",
+    "returnOther": "Bütün məqalələrə qayıt",
+    "before": "Əvvəlki",
+    "latest": "Növbəti"
+  },
+  "servicesPage": {
+    "one": "Nəqliyyat xidmətləri",
+    "two": "Anbar həlləri",
+    "three": "Gömrük xidmətləri",
+    "four": "Xidmətlərimiz",
+    "five": "Əlaqə məlumatları",
+    "email": "Email ünvanımız",
+    "phone": "Telefon",
+    "adress": "Ünvanımız",
+    "support": "24/7 müştəri dəstəyi",
+    "six": "Komandamız hər hansı sualda sizə kömək etməyə hazırdır",
+    "moreAbout": "Ətraflı məlumat",
+    "features": "Xüsusiyyətlər",
+    "advantages": "Üstünlüklərimiz?",
+    "fag": "Tez-tez verilən suallar"
+  },
+  "photoGallery": {
+    "badge": "Foto Qalereya"
+  },
+  "employeeData": {
+    "one": "Peşəkar",
+    "two": "Təcrübəli",
+    "three": "Etibarlı",
+    "four": "Peşəkar mütəxəssis"
+  },
+  "mediaData": {
+    "one": "YouTube-dan yüklənir"
+  },
+  "partnersSection": {
+    "one": "Etibarlı əməkdaşlıq şəbəkəmiz"
+  }
+}

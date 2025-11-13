@@ -1,0 +1,39 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.label .title {
+  color: #f8f7f7;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+.error {
+  border: red;
+}
+.textarea {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  align-self: stretch;
+  min-height: 176px;
+  border-radius: 8px;
+  border: 1px solid #9e9293;
+  background: transparent;
+  backdrop-filter: blur(3.253246784210205px);
+  color: #f8f7f7;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  &:placeholder-shown {
+    color: #9e9293;
+  }
+}
